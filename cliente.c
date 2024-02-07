@@ -14,5 +14,6 @@ void Escrever_dados(){
     printf("Digite a Quantidade de Clientes:\t");
     scanf("%d", &Quantidade_Clientes);
     struct clientes *Clientes_Var = (struct clientes *)malloc(sizeof(struct clientes) * Quantidade_Clientes);
-    fopen("Clientes.txt", "wr");
+    FILE *Arquivo_Clientes = fopen("Clientes.txt", "wr");
+    fclose(Arquivo_Clientes);
 }

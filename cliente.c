@@ -12,8 +12,3 @@ void Escrever_dados(){
 
     fopen("Clientes.txt", "wr");
 }
-
-void Ler_dados(){
-
-    fopen("Clientes.txt", "rt");
-}

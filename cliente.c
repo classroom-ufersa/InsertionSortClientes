@@ -6,10 +6,14 @@ struct clientes{
     char Nome[80];
     char Endereco[80];
     int Codigo_de_Cliente;
+};
+
+void Escrever_dados(){
+
+    fopen("Clientes.txt", "wr");
 }
 
-
-Ler_dados(){
+void Ler_dados(){
 
     fopen("Clientes.txt", "rt");
 }

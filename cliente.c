@@ -16,4 +16,9 @@ void Escrever_dados(){
     struct clientes *Clientes_Var = (struct clientes *)malloc(sizeof(struct clientes) * Quantidade_Clientes);
     FILE *Arquivo_Clientes = fopen("Clientes.txt", "wr");
     fclose(Arquivo_Clientes);
+    printf("Digite o nome do cliente:\n");
+    scanf("%s",Clientes_Var->Nome);
+    printf("Digite o endereco do cliente:\n");
+    scanf("%s", Clientes_Var->Endereco);
+    printf("%s", &Clientes_Var->Codigo_de_Cliente);
 }

@@ -23,7 +23,7 @@ void Escrever_dados(){
     scanf("%s",Clientes_Var->Nome);
     printf("Digite o endereco do cliente:\n");
     scanf("%s", Clientes_Var->Endereco);
-    printf("Digite o codigo do cliente:\n")
+    printf("Digite o codigo do cliente:\n");
     printf("%s", Clientes_Var->Codigo_de_Cliente);
     }
     

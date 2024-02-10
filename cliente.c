@@ -13,7 +13,7 @@ void Escrever_dados(){
     int Quantidade_Clientes; int contador;
     printf("Digite a Quantidade de Clientes:\t");
     scanf("%d", &Quantidade_Clientes);
-    struct clientes *Clientes_Var = (struct clientes *)malloc(sizeof(struct clientes) * Quantidade_Clientes);
+    Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes);
     FILE *Arquivo_Clientes = fopen("Clientes.txt", "wr");
 
     for (contador = 0; contador < Quantidade_Clientes; contador++)

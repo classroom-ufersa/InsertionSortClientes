@@ -4,17 +4,20 @@
   
 //Definicao da struct clientes 
 struct clientes{
-    char Nome[80];
-    char Endereco[80];
-    int Codigo_de_Cliente;
+    char nome[80];
+    char endereco[80];
+    int codigo_cliente;
 };
 
 //Criacao da funcao Escrever_dados, que vai pedir os dados do cliente ao usuario.
-void Escrever_dados(){
+void escrever_dados(){
 
-    int Quantidade_Clientes; int contador;
-    printf("Digite a Quantidade de Clientes:\t"); //Pergunta ao usuario a quantidade de clientes que ele quer cadastrar os dados.
-    scanf("%d", &Quantidade_Clientes);
+    int quantidade_clientes; int contador;
+    printf("===Cadastro de clientes===");
+
+    //Pergunta ao usuario a quantidade de clientes que ele quer cadastrar os dados.
+    printf("Digite a Quantidade de clientes que deseja cadastrar:\t"); 
+    scanf("%d", &quantidade_clientes);
     Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); //Criacao do malloc para guardar um espaço na memoria para a quantidade de clientes.
 
     //Criacao do for para pedir os dados do cliente ate que quantidade de clientes que usuario digitou chegue no limite imposto no loop.

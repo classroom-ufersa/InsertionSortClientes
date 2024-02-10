@@ -30,9 +30,24 @@ void Escrever_dados(){
 
         printf("Digite o codigo do cliente:\n");
         scanf("%d", &Clientes_Var[contador].Codigo_de_Cliente);
-        fprintf(Arquivo_Clientes, "Codigo de Cliente:  %s\n", Clientes_Var[contador].Codigo_de_Cliente);
+        fprintf(Arquivo_Clientes, "Codigo de Cliente:  %d\n", Clientes_Var[contador].Codigo_de_Cliente);
     }
     
     fclose(Arquivo_Clientes);
-    
+}
+
+void insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes)
+{
+    int Contador1, Contador2;
+    char key;
+    for (Contador1 = 1; Contador1 < Quantidade_Clientes; Contador1++) {
+        key = Clientes_Var[Contador1].Nome[0];
+        Contador2 = Contador1 - 1;
+
+        while (Contador2 >= 0 && Clientes_Var[Contador2].Nome[0] > key) {
+            Clientes_Var[Contador2 + 1].Nome[0] = Clientes_Var[Contador2].Nome[0];
+            Contador2 = Contador2 - 1;
+        }
+        Clientes_Var[Contador2 + 1].Nome[0] = key;
+    }
 }

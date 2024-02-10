@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include "cliente.h"
   
-  
-  //Definicao da struct clientes 
+//Definicao da struct clientes 
 struct clientes{
     char Nome[80];
     char Endereco[80];

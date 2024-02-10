@@ -9,7 +9,6 @@ struct clientes{
     int Codigo_de_Cliente;
 };
 
-
 //Criacao da funcao Escrever_dados, que vai pedir os dados do cliente ao usuario.
 void Escrever_dados(){
 

@@ -45,9 +45,9 @@ void insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes)
         Contador2 = Contador1 - 1;
 
         while (Contador2 >= 0 && Clientes_Var[Contador2].Nome[0] > key) {
-            Clientes_Var[Contador2 + 1].Nome[0] = Clientes_Var[Contador2].Nome[0];
+            Clientes_Var[Contador2 + 1] = Clientes_Var[Contador2];
             Contador2 = Contador2 - 1;
         }
-        Clientes_Var[Contador2 + 1].Nome[0] = key;
+        Clientes_Var[Contador2 + 1] = Clientes_Var[Contador1];
     }
 }

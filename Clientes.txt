@@ -1,0 +1,6 @@
+Nome:  felipe
+Endereco:  alexandria
+Codigo de Cliente:  123
+Nome:  porfirio
+Endereco:  portal
+Codigo de Cliente:  432

@@ -17,8 +17,7 @@ void Escrever_dados() {
  Clientes **Clientes_Var = (Clientes **)malloc(sizeof(Clientes *) * Quantidade_Clientes);
 if (Clientes_Var == NULL) {
     printf("Erro ao alocar memória para os clientes.\n");
-    // Trate o erro de acordo com a necessidade, como encerrar o programa ou retornar um código de erro
-    exit(1); // Ou outro valor de erro adequado
+   exit(1); 
 }
 
 for(i=0; i<Quantidade_Clientes; i++){

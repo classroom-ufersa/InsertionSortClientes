@@ -6,6 +6,6 @@ typedef struct clientes Clientes;
 /*Funcao que preenche os dados dos clientes e os armazena em um arquivo e no vetor*/
 void Escrever_dados();
 
-void insertionSort(Clientes **Clientes_Var, int Quantidade_Clientes);
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes);
 
 #endif // CLIENTES_H

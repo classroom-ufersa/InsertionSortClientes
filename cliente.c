@@ -18,52 +18,55 @@ void escrever_dados(){
     //Pergunta ao usuario a quantidade de clientes que ele quer cadastrar os dados.
     printf("Digite a Quantidade de clientes que deseja cadastrar:\t"); 
     scanf("%d", &quantidade_clientes);
-    Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); //Criacao do malloc para guardar um espaço na memoria para a quantidade de clientes.
+
+    //Criacao do malloc para guardar um espaço na memoria para a quantidade de clientes
+    Clientes *clientes_var = (Clientes*)malloc(sizeof(Clientes) *quantidade_clientes);  
 
     //Criacao do for para pedir os dados do cliente ate que quantidade de clientes que usuario digitou chegue no limite imposto no loop.
-    for (contador = 0; contador < Quantidade_Clientes; contador++) {
+    for (contador = 0; contador < quantidade_clientes; contador++) {
 
         printf("Digite o nome do cliente:\n");
-        scanf(" %[^\n]", Clientes_Var[contador].Nome);
+        scanf(" %[^\n]", clientes_var[contador].nome);
 
         printf("Digite o endereco do cliente:\n");
-        scanf(" %[^\n]", Clientes_Var[contador].Endereco);
+        scanf(" %[^\n]", clientes_var[contador].endereco);
 
         printf("Digite o codigo do cliente:\n");
-        scanf("%d", &Clientes_Var[contador].Codigo_de_Cliente);
+        scanf("%d", &clientes_var[contador].codigo_cliente);
 
       //Chama a funcao insertionSort para que a cada cliente cadastrado, os nomes sejam colocados em ordem alfabetica.
-        void insertionSort(Clientes_Var, contador); 
+        void insertionSort(clientes_var, contador); 
     }
 
-    FILE *Arquivo_Clientes = fopen("Clientes.txt", "wr"); //Criacao do FILE para manipular um arquivo txt e armazenar nesse arquivo os dados do cliente.
+   //Criacao do FILE para manipular um arquivo txt e armazenar nesse arquivo os dados do cliente.
+    FILE *arquivo_clientes = fopen("clientes.txt", "wr");
 
    //Criacao de um for para amazenar os dados do cliente em um arquivo txt de acordo com a quantidade de clientes que o usuario vai cadastrar.
-    for (contador = 0; contador < Quantidade_Clientes; contador++){
+    for (contador = 0; contador < quantidade_clientes; contador++){
         
-        fprintf(Arquivo_Clientes, "Dados dos clientes %d:\n", contador + 1);
-        fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador].Nome);
-        fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
-        fprintf(Arquivo_Clientes, "Codigo de Cliente:  %d\n", Clientes_Var[contador].Codigo_de_Cliente);
+        fprintf(arquivo_clientes, "Dados dos clientes %d:\n", contador + 1);
+        fprintf(arquivo_clientes, "Nome:  %s\n", clientes_var[contador].nome);
+        fprintf(arquivo_clientes, "Endereco:  %s\n", clientes_var[contador].endereco);
+        fprintf(arquivo_clientes, "Codigo de Cliente:  %d\n", clientes_var[contador].codigo_cliente);
     }
 
     //Depois de terminar de usar o arquivo, o arquivo eh fechado usando fclose, liberando assim os recursos associados a ele.
-    fclose(Arquivo_Clientes);
+    fclose(arquivo_clientes);
 }
 
  //Criacao da funcao insertionSort para ordenacao de elementos, nesse caso dos nomes dos clientes em ordem alfabetica.
-void insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes){
+void insertionSort(Clientes *clientes_var, int quantidade_clientes){
 
-    int Contador1, Contador2;
+    int contador1, contador2;
     char key;
-    for (Contador1 = 1; Contador1 < Quantidade_Clientes; Contador1++) {
-        key = Clientes_Var[Contador1].Nome[0];
-        Contador2 = Contador1 - 1;
+    for (contador1 = 1; contador1 < quantidade_clientes; contador1++) {
+        key = clientes_var[contador1].nome[0];
+        contador2 = contador1 - 1;
 
-        while (Contador2 >= 0 && Clientes_Var[Contador2].Nome[0] > key) {
-            Clientes_Var[Contador2 + 1] = Clientes_Var[Contador2];
-            Contador2 = Contador2 - 1;
+        while (contador2 >= 0 && clientes_var[contador2].nome[0] > key) {
+            clientes_var[contador2 + 1] = clientes_var[contador2];
+            contador2 = contador2 - 1;
         }
-        Clientes_Var[Contador2 + 1] = Clientes_Var[Contador1];
+        clientes_var[contador2 + 1] = clientes_var[contador1];
     }
 }

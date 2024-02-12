@@ -43,6 +43,7 @@ void Escrever_dados()
     system("cls");
     printf("Digite o nome do cliente:\n");
     scanf(" %[^\n]", Clientes_Var[contador].Nome);
+    string_maiuscula_minuscula(Clientes_Var[contador].Nome);
 
     printf("Digite o endereco do cliente:\n");
     scanf(" %[^\n]", Clientes_Var[contador].Endereco);

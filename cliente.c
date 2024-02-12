@@ -69,6 +69,10 @@ void Escrever_dados()
   free(Clientes_Var);
 }
 
+void string_maiuscula_minuscula(char *str){
+
+}
+
 // Função de ordenação insertionSort
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes)
 {

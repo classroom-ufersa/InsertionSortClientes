@@ -73,17 +73,15 @@ void string_maiuscula_minuscula(char *str){
 
   int i;
   str[0] = toupper(str[0]);
-  for (i = 1;str != '\0'; i++)
+  for (i = 1; str[i] != '\0'; i++)
   {
-    if(isspace(str[i - 1])){
-      str[i] = toupper(str[i]);
+    if(isspace(str[i - 1])){ // Se o caractere passado for um espaço
+      str[i] = toupper(str[i]); // Transforma a letra em maiúscula
     }
     else{
-      str[i] = tolower(str[i]);
+      str[i] = tolower(str[i]); // Transforma a letra em minúscula
     }
   }
-  
-
 }
 
 // Função de ordenação insertionSort

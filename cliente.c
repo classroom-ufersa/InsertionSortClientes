@@ -71,6 +71,15 @@ void Escrever_dados()
 
 void string_maiuscula_minuscula(char *str){
 
+  int i = 1;
+  while (str != '\0')
+  {
+    if(isspace(str[i + 1])){
+      
+    }
+  }
+  
+
 }
 
 // Função de ordenação insertionSort

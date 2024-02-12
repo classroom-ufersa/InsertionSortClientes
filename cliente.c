@@ -71,11 +71,15 @@ void Escrever_dados()
 
 void string_maiuscula_minuscula(char *str){
 
-  int i = 1;
-  while (str != '\0')
+  int i;
+  str[0] = toupper(str[0]);
+  for (i = 1;str != '\0'; i++)
   {
-    if(isspace(str[i + 1])){
-      
+    if(isspace(str[i - 1])){
+      str[i] = toupper(str[i]);
+    }
+    else{
+      str[i] = tolower(str[i]);
     }
   }
   

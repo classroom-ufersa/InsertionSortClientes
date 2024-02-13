@@ -73,6 +73,7 @@ void Escrever_dados() {
   free(Clientes_Var);
 }
 
+//Funcao que converte uma string para o formato de capitalizacao mista
 void string_maiuscula_minuscula(char *str) {
   int i;
   str[0] = toupper(str[0]);

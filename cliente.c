@@ -10,16 +10,6 @@ typedef struct {
   int Codigo_de_Cliente;
 } Clientes;
 
-// Protótipos das funções
-void Escrever_dados();
-void string_maiuscula_minuscula(char *str);
-Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes);
-
-int main() {
-  Escrever_dados();
-  return 0;
-}
-
 // Função para escrever os dados dos clientes em um arquivo
 void Escrever_dados() {
   int Quantidade_Clientes;

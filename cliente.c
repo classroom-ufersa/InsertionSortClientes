@@ -43,6 +43,7 @@ void Escrever_dados()
     system("cls");
     printf("Digite o nome do cliente:\n");
     scanf(" %[^\n]", Clientes_Var[contador].Nome);
+    string_maiuscula_minuscula(Clientes_Var[contador].Nome);
 
     printf("Digite o endereco do cliente:\n");
     scanf(" %[^\n]", Clientes_Var[contador].Endereco);
@@ -67,6 +68,21 @@ void Escrever_dados()
   fclose(Arquivo_Clientes);
   // Libera a memória alocada
   free(Clientes_Var);
+}
+
+void string_maiuscula_minuscula(char *str){
+
+  int i;
+  str[0] = toupper(str[0]);
+  for (i = 1; str[i] != '\0'; i++)
+  {
+    if(isspace(str[i - 1])){ // Se o caractere passado for um espaço
+      str[i] = toupper(str[i]); // Transforma a letra em maiúscula
+    }
+    else{
+      str[i] = tolower(str[i]); // Transforma a letra em minúscula
+    }
+  }
 }
 
 // Função de ordenação insertionSort

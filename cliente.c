@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include "cliente.h"
 
 // Definição da estrutura clientes
-typedef struct {
+struct clientes{
   char Nome[80];
   char Endereco[80];
   int Codigo_de_Cliente;
-} Clientes;
+};
 
 // Função para escrever os dados dos clientes em um arquivo
 void Escrever_dados() {

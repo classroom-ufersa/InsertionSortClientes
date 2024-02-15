@@ -64,15 +64,16 @@ void Escrever_dados() {
   free(Clientes_Var);
 }
 
-//Funcao que converte uma string para o formato de capitalizacao mista
+// Função que converte uma string para o formato de capitalização mista
 void string_maiuscula_minuscula(char *str) {
   int i;
+  // pega a primeira letra de qualquer nome e transforma em maiuscula obrigatoriamente maiuscula
   str[0] = toupper(str[0]);
   for (i = 1; str[i] != '\0'; i++) {
     if (isspace(str[i - 1])) { // Se o caractere passado for um espaço
-      str[i] = toupper(str[i]); // Transforma a letra em maiúscula
-    } else {
-      str[i] = tolower(str[i]); // Transforma a letra em minúscula
+      str[i] = toupper(str[i]); // Transforma a letra na posição i em maiúscula
+    } else { // se for uma letra qualquer
+      str[i] = tolower(str[i]); // Transforma a letra na posição i em minúscula
     }
   }
 }

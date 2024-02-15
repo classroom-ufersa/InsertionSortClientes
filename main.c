@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "cliente.c"
+#include "cliente.h"
 
 int main(){
 

@@ -80,6 +80,8 @@ O sexto aluno (idade 3) é comparado com os alunos anteriores e movido para a po
 Fila final ordenada: [1, 2, 3, 4, 5, 6].
 > ![Insertion Sort](https://markbowman.org/LCC/SortInsertion.gif)
 
+![Insertion Sort](https://camo.githubusercontent.com/ae22b4c49b217531d947a1e6825d400d3cb51d9c7cd11d1790eba04060e88c3e/68747470733a2f2f6d61726b626f776d616e2e6f72672f4c43432f536f7274496e73657274696f6e2e676966)
+
 ***
 
 # Implementação

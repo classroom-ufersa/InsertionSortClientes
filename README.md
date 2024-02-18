@@ -50,7 +50,34 @@ O Insertion Sort, ou "Ordenação por Inserção", é um algoritmo de ordenaçã
 
 ## Como funciona o Insertion Sort
 > Imagine uma professora organizando alunos em uma fila por idade, do mais novo para o mais velho. Ela começa com o primeiro aluno (primeira posição do vetor) e considera ele como ordenado. Em seguida, ela pega cada aluno subsequente (segunda posição em diante) e o coloca na posição correta em relação aos alunos anteriores, movendo-os conforme necessário. Esse processo continua até que todos os alunos estejam ordenados por idade, do mais novo para o mais velho.
-> 
+>  
+
+Suponha que temos a seguinte fila de alunos desorganizada, representada por um vetor de idades: [5, 2, 4, 6, 1, 3].
+
+## -Inicialização (resultado inicial):
+
+Fila inicial: [5, 2, 4, 6, 1, 3].
+ ## -Implementação (implementação do algoritmo):
+
+A professora considera o primeiro aluno (idade 5) como ordenado.
+Pega o segundo aluno (idade 2) e o coloca na posição correta em relação ao primeiro aluno.
+Fila: [2, 5, 4, 6, 1, 3].
+ ## -Ordenação:
+
+O terceiro aluno (idade 4) é comparado com os alunos anteriores e inserido na posição correta.
+Fila: [2, 4, 5, 6, 1, 3].
+ ## -Resultados intermediários:
+
+O quarto aluno (idade 6) é comparado com os alunos anteriores e não precisa ser movido.
+Fila: [2, 4, 5, 6, 1, 3].
+## -Resultado final:
+
+O quinto aluno (idade 1) é comparado com os alunos anteriores e movido para a posição correta.
+Fila: [1, 2, 4, 5, 6, 3].
+# Conclusão (resultado final e conclusão):
+
+O sexto aluno (idade 3) é comparado com os alunos anteriores e movido para a posição correta.
+Fila final ordenada: [1, 2, 3, 4, 5, 6].
 > ![Insertion Sort](https://markbowman.org/LCC/SortInsertion.gif)
 
 ***

@@ -7,6 +7,18 @@ struct clientes{
   int Codigo_de_Cliente;
 };
 
+void Contador_de_Clientes(int *contador_clientes){
+
+    char linha[200];
+    FILE *Arquivo_Clientes = fopen("Clientes.txt", "rt");
+    while (fgets(linha, 200, Arquivo_Clientes))
+    {
+        if(strstr(linha, "Dados dos clientes")){
+            contador_clientes++;
+        }
+    }
+}
+
 // Função para escrever os dados dos clientes em um arquivo
 void Escrever_dados() {
   int Quantidade_Clientes;

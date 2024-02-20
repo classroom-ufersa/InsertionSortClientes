@@ -92,22 +92,19 @@ void string_maiuscula_minuscula(char *str) {
 }
 
 // Função de ordenação insertionSort
-Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes)
-{
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
   int i, j;
   // cria a variavel que vai servir de parametro na verificação abaixo
   Clientes key;
 
   // começa um for que percorre todos os clientes exitentes
   // começa em 1, pois necessita de um mais cliente a esquerda (que no caso e 0), para se efutar a comparação
-  for (i = 1; i < Quantidade_Clientes; i++)
-  {
+  for (i = 1; i < Quantidade_Clientes; i++)  {
     key = Clientes_Var[i];
     j = i - 1;
 
     // Comparação completa dos nomes usando strcmp, verificando se Key.Nome tem letras "menores" que Clientes_Var[j].Nome
-    while (j >= 0 && strcmp(Clientes_Var[j].Nome, key.Nome) > 0)
-    {
+    while (j >= 0 && strcmp(Clientes_Var[j].Nome, key.Nome) > 0)  {
       // sobrescreve o conteudo do vetor na posição mais a direita de j, pelo conteudo do vetor na posição j
       // lembrando que se o loop for verdadeiro apenas 1 vez, a posição j + 1 = i
       Clientes_Var[j + 1] = Clientes_Var[j];

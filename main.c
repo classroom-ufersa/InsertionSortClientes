@@ -3,10 +3,10 @@
 int main()
 {
   int permanencia, escolha;
-  int *contador_clientes;
+  int *Quantidade_clientes;
   Clientes *Clientes_var = (Clientes *)malloc(sizeof(Clientes));
 
-  ler_arquivo(Clientes_var, escolha);
+  Ler_Arquivo(Clientes_var, Quantidade_clientes);
 
   do
   {
@@ -15,24 +15,24 @@ int main()
     scanf("%d", escolha);
     if (escolha == 1)
     {
-      realloc()
-          printf("Digite o nome do cliente:\n");
-      scanf(" %[^\n]", Clientes_Var[contador].Nome);
-      string_maiuscula_minuscula(Clientes_Var[contador].Nome);
+      realloc(Quantidade_clientes, Quantidade_clientes + 1);
+      printf("Digite o nome do cliente:\n");
+      scanf(" %[^\n]", Clientes_var[*Quantidade_clientes + 1].Nome);
+      string_maiuscula_minuscula(Clientes_var[*Quantidade_clientes + 1].Nome);
 
       printf("Digite o endereco do cliente:\n");
-      scanf(" %[^\n]", Clientes_Var[contador].Endereco);
+      scanf(" %[^\n]", Clientes_var[*Quantidade_clientes + 1].Endereco);
 
       printf("Digite o codigo do cliente:\n");
-      scanf("%d", &Clientes_Var[contador].Codigo_de_Cliente);
+      scanf("%d", &Clientes_var[*Quantidade_clientes + 1].Codigo_de_Cliente);
 
-      permanencia = 1
+      permanencia = 1;
     }
 
-  } while (permanencia == 1)
+  } while (permanencia == 1);
 
   // Chama a função Escrever_dados que foi implementada no cliente.c
-  Escrever_dados(Clientes_var);
+  Escrever_dados(Clientes_var, Quantidade_clientes);
 
   return 0;
 }

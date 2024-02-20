@@ -9,10 +9,10 @@
 /*Renomeacao de um tipo estruturado para Clientes*/
 typedef struct clientes Clientes;
 
-void ler_arquivo(Clientes *Clientes_var);
+void Ler_Arquivo(Clientes *Clientes_Var, int *Quantidade_clientes);
 
 /*Funcao que preenche os dados dos clientes e os armazena em um arquivo e no vetor*/
-void Escrever_dados(Clientes *Clientes_var);
+void Escrever_dados(Clientes *Clientes_Var, int *Quantidade_clientes);
 
 /*Funcao que converte uma string para o formato de capitalizacao mista, 
   Recebe como parametro o ponteiro do tipo caractere*/

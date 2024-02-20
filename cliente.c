@@ -1,34 +1,28 @@
 #include "cliente.h"
 
 // Definição da estrutura clientes
-struct clientes
-{
+struct clientes{
   char Nome[80];
   char Endereco[80];
   int Codigo_de_Cliente;
 };
 
-void Contador_de_Clientes(int *Quantidade_clientes)
-{
+void Contador_de_Clientes(int *Quantidade_clientes){
   char linha[200];
   FILE *Arquivo_Clientes = fopen("Clientes.txt", "rt");
-  if (Arquivo_Clientes == NULL)
-  {
+  if (Arquivo_Clientes == NULL) {
     printf("Erro na abertura do arquivo!!!");
     exit(1);
   }
-  while (fgets(linha, 200, Arquivo_Clientes))
-  {
-    if (strstr(linha, "Dados dos clientes"))
-    {
+  while (fgets(linha, 200, Arquivo_Clientes)) {
+    if (strstr(linha, "Dados dos clientes"))  {
       Quantidade_clientes++;
     }
   }
   fclose(Arquivo_Clientes);
 }
 
-void Ler_Arquivo(Clientes *Clientes_Var, int *Quantidade_clientes)
-{
+void Ler_Arquivo(Clientes *Clientes_Var, int *Quantidade_clientes){
   FILE *Arquivo_Clientes = fopen("Clientes.txt", "rt");
   int contador;
   int quantidade_clientes = Quantidade_clientes;
@@ -39,20 +33,17 @@ void Ler_Arquivo(Clientes *Clientes_Var, int *Quantidade_clientes)
 }
 
 // Função para escrever os dados dos clientes em um arquivo
-void Escrever_dados(Clientes *Clientes_Var, int *Quantidade_clientes)
-{
+void Escrever_dados(Clientes *Clientes_Var, int *Quantidade_clientes){
   int contador;
   // Abre o arquivo para escrita
   FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+");
-  if (Arquivo_Clientes == NULL)
-  {
+  if (Arquivo_Clientes == NULL)  {
     printf("Erro na abertura do arquivo!!!");
     exit(1);
   }
 
   // Loop para coletar os dados dos clientes
-  for (contador = 0; contador < Quantidade_clientes; contador++)
-  {
+  for (contador = 0; contador < Quantidade_clientes; contador++)  {
     printf("Digite o nome do cliente:\n");
     scanf(" %[^\n]", Clientes_Var[contador].Nome);
     string_maiuscula_minuscula(Clientes_Var[contador].Nome);
@@ -83,19 +74,18 @@ void Escrever_dados(Clientes *Clientes_Var, int *Quantidade_clientes)
 }
 
 // Função que converte uma string para o formato de capitalização mista
-void string_maiuscula_minuscula(char *str)
-{
+void string_maiuscula_minuscula(char *str) {
   int i;
   // pega a primeira letra de qualquer nome e transforma em maiuscula obrigatoriamente maiuscula
   str[0] = toupper(str[0]);
-  for (i = 1; str[i] != '\0'; i++)
-  {
-    if (isspace(str[i - 1]))
-    {                           // Se o caractere passado for um espaço
+  for (i = 1; str[i] != '\0'; i++)  {
+
+     // Se o caractere passado for um espaço
+    if (isspace(str[i - 1])) {                         
       str[i] = toupper(str[i]); // Transforma a letra na posição i em maiúscula
     }
-    else
-    {                           // se for uma letra qualquer
+     // se for uma letra qualquer
+    else {                          
       str[i] = tolower(str[i]); // Transforma a letra na posição i em minúscula
     }
   }

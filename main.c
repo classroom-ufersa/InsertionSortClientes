@@ -1,20 +1,17 @@
 #include "cliente.c"
 
-int main()
-{
+int main(){
   int permanencia, escolha;
   int *Quantidade_clientes;
   Clientes *Clientes_var = (Clientes *)malloc(sizeof(Clientes));
 
   Ler_Arquivo(Clientes_var, Quantidade_clientes);
 
-  do
-  {
+  do {
     permanencia = 0;
     printf("Caso deseje cadastrar um novo cliente digite 1\n");
     scanf("%d", escolha);
-    if (escolha == 1)
-    {
+    if (escolha == 1) {
       realloc(Quantidade_clientes, Quantidade_clientes + 1);
       printf("Digite o nome do cliente:\n");
       scanf(" %[^\n]", Clientes_var[*Quantidade_clientes + 1].Nome);

@@ -4,6 +4,10 @@
 /*Renomeacao de um tipo estruturado para Clientes*/
 typedef struct clientes Clientes;
 
+int Contador_Clientes();
+
+void Ler_Dados(Clientes *Clientes_Var);
+
 /*Funcao que preenche os dados dos clientes e os armazena em um arquivo e no vetor*/
 void Escrever_dados();
 

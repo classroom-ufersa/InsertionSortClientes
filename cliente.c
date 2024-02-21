@@ -12,7 +12,21 @@ struct clientes
   int Codigo_de_Cliente;
 };
 
-
+int Contador_Clientes(){
+  char linha[200];
+  int Quantidade_clientes;
+  FILE *Arquivo_Clientes = fopen("Clientes.txt", "rt");
+  if (Arquivo_Clientes == NULL) {
+    printf("Erro na abertura do arquivo!!!");
+    exit(1);
+  }
+  while (fgets(linha, 200, Arquivo_Clientes)) {
+    if (strstr(linha, "Dados dos clientes"))  {
+      Quantidade_clientes++;
+    }
+  }
+  fclose(Arquivo_Clientes);
+}
 
 void Ler_Dados(Clientes *Clientes_Var)
 {
@@ -23,6 +37,7 @@ void Ler_Dados(Clientes *Clientes_Var)
     printf("Erro na abertura do arquivo!!!");
     exit(1);
   }
+  int Quantidade_clientes = Contador_Clientes();
   for (contador = 0; contador < Quantidade_clientes; contador++)
   {
     fscanf(Arquivo_Clientes, "Dados dos clientes %*d:\nNome: %s\nEndereco: %s\nCodigo de Cliente: %d\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, Clientes_Var[contador].Codigo_de_Cliente);

@@ -1,3 +1,5 @@
+Cliente.c
+
 #include "cliente.h"
 
 // Definição da estrutura clientes
@@ -25,8 +27,7 @@ void Contador_de_Clientes(int *Quantidade_clientes){
 void Ler_Arquivo(Clientes *Clientes_Var, int *Quantidade_clientes){
   FILE *Arquivo_Clientes = fopen("Clientes.txt", "rt");
   int contador;
-  int quantidade_clientes = Quantidade_clientes;
-  for (contador = 0; contador < Quantidade_clientes; contador++){
+  for (contador = 0; contador < *Quantidade_clientes; contador++){
     fscanf(Arquivo_Clientes, "Dados dos clientes %*d:\nNome: %s\nEndereco: %s\nCodigo de Cliente: %d\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, Clientes_Var[contador].Codigo_de_Cliente);
   }
   fclose(Arquivo_Clientes);
@@ -36,30 +37,15 @@ void Ler_Arquivo(Clientes *Clientes_Var, int *Quantidade_clientes){
 void Escrever_dados(Clientes *Clientes_Var, int *Quantidade_clientes){
   int contador;
   // Abre o arquivo para escrita
-  FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+");
-  if (Arquivo_Clientes == NULL)  {
+  FILE *Arquivo_Clientes = fopen("Clientes.txt", "wt");
+  if (Arquivo_Clientes == NULL)
+  {
     printf("Erro na abertura do arquivo!!!");
     exit(1);
   }
 
-  // Loop para coletar os dados dos clientes
-  for (contador = 0; contador < Quantidade_clientes; contador++)  {
-    printf("Digite o nome do cliente:\n");
-    scanf(" %[^\n]", Clientes_Var[contador].Nome);
-    string_maiuscula_minuscula(Clientes_Var[contador].Nome);
-
-    printf("Digite o endereco do cliente:\n");
-    scanf(" %[^\n]", Clientes_Var[contador].Endereco);
-
-    printf("Digite o codigo do cliente:\n");
-    scanf("%d", &Clientes_Var[contador].Codigo_de_Cliente);
-  }
-
-  // Chama a função insertionSort para ordenar os clientes pelo nome
-  Clientes_Var = insertionSort(Clientes_Var, Quantidade_clientes);
-
   // Escreve os dados dos clientes ordenados no arquivo
-  for (contador = 0; contador < Quantidade_clientes; contador++)
+  for (contador = 0; contador < *Quantidade_clientes; contador++)
   {
     fprintf(Arquivo_Clientes, "Dados dos clientes %d:\n", contador + 1);
     fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador].Nome);
@@ -69,8 +55,6 @@ void Escrever_dados(Clientes *Clientes_Var, int *Quantidade_clientes){
 
   // Fecha o arquivo
   fclose(Arquivo_Clientes);
-  // Libera a memória alocada
-  free(Clientes_Var);
 }
 
 // Função que converte uma string para o formato de capitalização mista
@@ -92,14 +76,16 @@ void string_maiuscula_minuscula(char *str) {
 }
 
 // Função de ordenação insertionSort
-Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+void insertionSort(Clientes *Clientes_Var, int *Quantidade_Clientes)
+{
   int i, j;
   // cria a variavel que vai servir de parametro na verificação abaixo
   Clientes key;
 
   // começa um for que percorre todos os clientes exitentes
   // começa em 1, pois necessita de um mais cliente a esquerda (que no caso e 0), para se efutar a comparação
-  for (i = 1; i < Quantidade_Clientes; i++)  {
+  for (i = 1; i < *Quantidade_Clientes; i++)
+  {
     key = Clientes_Var[i];
     j = i - 1;
 
@@ -115,5 +101,4 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
     // resaltando que soma-se +1 a j, pois ao final do loop se decrementa 1 de j
     Clientes_Var[j + 1] = key;
   }
-  return Clientes_Var;
 }

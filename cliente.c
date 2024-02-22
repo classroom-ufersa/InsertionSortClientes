@@ -38,6 +38,7 @@ void Ler_Dados(Clientes *Clientes_Var)
     exit(1);
   }
   int Quantidade_clientes = Contador_Clientes();
+  realloc(Clientes_Var, Quantidade_clientes);
   for (contador = 0; contador < Quantidade_clientes; contador++)
   {
     fscanf(Arquivo_Clientes, "Dados dos clientes %*d:\nNome: %s\nEndereco: %s\nCodigo de Cliente: %d\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, Clientes_Var[contador].Codigo_de_Cliente);
@@ -48,15 +49,15 @@ void Ler_Dados(Clientes *Clientes_Var)
 // Função para escrever os dados dos clientes em um arquivo
 void Escrever_dados()
 {
-  int Quantidade_Clientes;
+  int Novos_Clientes, Quantidade_Clientes;
   int contador;
 
   // Solicita a quantidade de clientes ao usuário
   printf("Digite a Quantidade de Clientes:\t");
-  scanf("%d", &Quantidade_Clientes);
+  scanf("%d", &Novos_Clientes);
 
   // Aloca memória para armazenar os dados dos clientes
-  Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes);
+  Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Novos_Clientes);
   if (Clientes_Var == NULL)
   {
     printf("Erro na alocação de memória!!!");
@@ -64,15 +65,15 @@ void Escrever_dados()
   }
 
   // Abre o arquivo para escrita
-  FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+");
+  FILE *Arquivo_Clientes = fopen("Clientes.txt", "at");
   if (Arquivo_Clientes == NULL)
   {
     printf("Erro na abertura do arquivo!!!");
     exit(1);
   }
-
+  Ler_Dados(Clientes_Var);
   // Loop para coletar os dados dos clientes
-  for (contador = 0; contador < Quantidade_Clientes; contador++)
+  for (contador = 0; contador < Novos_Clientes; contador++)
   {
     printf("Digite o nome do cliente:\n");
     scanf(" %[^\n]", Clientes_Var[contador].Nome);
@@ -85,18 +86,21 @@ void Escrever_dados()
     scanf("%d", &Clientes_Var[contador].Codigo_de_Cliente);
   }
 
+  Quantidade_Clientes = Contador_Clientes();
+  Quantidade_Clientes += Novos_Clientes;
+
   // Chama a função insertionSort para ordenar os clientes pelo nome
   Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes);
 
   // Escreve os dados dos clientes ordenados no arquivo
-  for (contador = 0; contador < Quantidade_Clientes; contador++)
+  for (contador = 0; contador < Novos_Clientes; contador++)
   {
     fprintf(Arquivo_Clientes, "Dados dos clientes %d:\n", contador + 1);
     fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador].Nome);
     fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
     fprintf(Arquivo_Clientes, "Codigo de Cliente:  %d\n\n", Clientes_Var[contador].Codigo_de_Cliente);
   }
-
+  
   // Fecha o arquivo
   fclose(Arquivo_Clientes);
   // Libera a memória alocada

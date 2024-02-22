@@ -21,7 +21,7 @@ int Contador_Clientes(){
     exit(1);
   }
   while (fgets(linha, 200, Arquivo_Clientes)) {
-    if (strstr(linha, "Dados dos clientes"))  {
+    if (strstr(linha, "Dados dos clientes:"))  {
       Quantidade_clientes++;
     }
   }
@@ -41,7 +41,7 @@ void Ler_Dados(Clientes *Clientes_Var)
   realloc(Clientes_Var, Quantidade_clientes);
   for (contador = 0; contador < Quantidade_clientes; contador++)
   {
-    fscanf(Arquivo_Clientes, "Dados dos clientes %*d:\nNome: %s\nEndereco: %s\nCodigo de Cliente: %d\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, Clientes_Var[contador].Codigo_de_Cliente);
+    fscanf(Arquivo_Clientes, "Dados dos clientes:\nNome: %s\nEndereco: %s\nCodigo de Cliente: %d\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, Clientes_Var[contador].Codigo_de_Cliente);
   }
   fclose(Arquivo_Clientes);
 }
@@ -52,10 +52,6 @@ void Escrever_dados()
   int Novos_Clientes, Quantidade_Clientes;
   int contador;
 
-  // Solicita a quantidade de clientes ao usuário
-  printf("Digite a Quantidade de Clientes:\t");
-  scanf("%d", &Novos_Clientes);
-
   // Aloca memória para armazenar os dados dos clientes
   Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Novos_Clientes);
   if (Clientes_Var == NULL)
@@ -65,15 +61,23 @@ void Escrever_dados()
   }
 
   // Abre o arquivo para escrita
-  FILE *Arquivo_Clientes = fopen("Clientes.txt", "at");
+  FILE *Arquivo_Clientes = fopen("Clientes.txt", "wt");
   if (Arquivo_Clientes == NULL)
   {
     printf("Erro na abertura do arquivo!!!");
     exit(1);
   }
   Ler_Dados(Clientes_Var);
+  
+  // Solicita a quantidade de clientes ao usuário
+  printf("Digite a Quantidade de Clientes:\t");
+  scanf("%d", &Novos_Clientes);
+  Quantidade_Clientes = Contador_Clientes();
+  Quantidade_Clientes += Novos_Clientes;
+  realloc(Clientes_Var, Quantidade_Clientes);
+
   // Loop para coletar os dados dos clientes
-  for (contador = 0; contador < Novos_Clientes; contador++)
+  for (contador = Quantidade_Clientes - Novos_Clientes; contador < Quantidade_Clientes; contador++)
   {
     printf("Digite o nome do cliente:\n");
     scanf(" %[^\n]", Clientes_Var[contador].Nome);
@@ -86,16 +90,13 @@ void Escrever_dados()
     scanf("%d", &Clientes_Var[contador].Codigo_de_Cliente);
   }
 
-  Quantidade_Clientes = Contador_Clientes();
-  Quantidade_Clientes += Novos_Clientes;
-
   // Chama a função insertionSort para ordenar os clientes pelo nome
   Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes);
 
   // Escreve os dados dos clientes ordenados no arquivo
-  for (contador = 0; contador < Novos_Clientes; contador++)
+  for (contador = 0; contador < Quantidade_Clientes; contador++)
   {
-    fprintf(Arquivo_Clientes, "Dados dos clientes %d:\n", contador + 1);
+    fprintf(Arquivo_Clientes, "Dados dos clientes:\n", contador + 1);
     fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador].Nome);
     fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
     fprintf(Arquivo_Clientes, "Codigo de Cliente:  %d\n\n", Clientes_Var[contador].Codigo_de_Cliente);

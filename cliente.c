@@ -5,30 +5,30 @@
 #include "cliente.h"
 
 // Definição da estrutura clientes
-struct clientes
-{
-  char Nome[80];
-  char Endereco[80];
-  int Codigo_de_Cliente;
-};
+
 
 int Contador_Clientes(){
+  printf("estou aqui\n");
   char linha[200];
-  int Quantidade_clientes;
+  int Quantidade_Clientes = 0;
   FILE *Arquivo_Clientes = fopen("Clientes.txt", "rt");
   if (Arquivo_Clientes == NULL) {
     printf("Erro na abertura do arquivo!!!");
     exit(1);
   }
-  while (fgets(linha, 200, Arquivo_Clientes)) {
+  while (fgets(linha, 200, Arquivo_Clientes) != NULL) {
+    printf("estou aqui dentro do for\n");
     if (strstr(linha, "Dados dos clientes:"))  {
-      Quantidade_clientes++;
+      printf("estou aqui dentro do if\n");
+      Quantidade_Clientes++;
     }
   }
   fclose(Arquivo_Clientes);
+  printf("dentro do conatador == %d\n", Quantidade_Clientes);
+  return Quantidade_Clientes;
 }
 
-void Ler_Dados(Clientes *Clientes_Var)
+void Ler_Dados(Clientes *Clientes_Var, int Quantidade_Clientes)
 {
   int contador;
   FILE *Arquivo_Clientes = fopen("Clientes.txt", "rt");
@@ -37,9 +37,7 @@ void Ler_Dados(Clientes *Clientes_Var)
     printf("Erro na abertura do arquivo!!!");
     exit(1);
   }
-  int Quantidade_clientes = Contador_Clientes();
-  realloc(Clientes_Var, Quantidade_clientes);
-  for (contador = 0; contador < Quantidade_clientes; contador++)
+  for (contador = 0; contador < Quantidade_Clientes; contador++)
   {
     fscanf(Arquivo_Clientes, "Dados dos clientes:\nNome: %s\nEndereco: %s\nCodigo de Cliente: %d\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, Clientes_Var[contador].Codigo_de_Cliente);
   }
@@ -47,18 +45,10 @@ void Ler_Dados(Clientes *Clientes_Var)
 }
 
 // Função para escrever os dados dos clientes em um arquivo
-void Escrever_dados()
+void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes)
 {
-  int Novos_Clientes, Quantidade_Clientes;
+  int Novos_Clientes = 0, Quantidade_Clientes;
   int contador;
-
-  // Aloca memória para armazenar os dados dos clientes
-  Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Novos_Clientes);
-  if (Clientes_Var == NULL)
-  {
-    printf("Erro na alocação de memória!!!");
-    exit(1);
-  }
 
   // Abre o arquivo para escrita
   FILE *Arquivo_Clientes = fopen("Clientes.txt", "wt");
@@ -67,14 +57,16 @@ void Escrever_dados()
     printf("Erro na abertura do arquivo!!!");
     exit(1);
   }
-  Ler_Dados(Clientes_Var);
   
   // Solicita a quantidade de clientes ao usuário
   printf("Digite a Quantidade de Clientes:\t");
   scanf("%d", &Novos_Clientes);
   Quantidade_Clientes = Contador_Clientes();
+  printf("dentro do Escrever_dados == %d\n", Quantidade_Clientes);
   Quantidade_Clientes += Novos_Clientes;
-  realloc(Clientes_Var, Quantidade_Clientes);
+  Clientes_Var = realloc(Clientes_Var, sizeof(Clientes) * Quantidade_Clientes);
+  Ler_Dados(Clientes_Var);
+
 
   // Loop para coletar os dados dos clientes
   for (contador = Quantidade_Clientes - Novos_Clientes; contador < Quantidade_Clientes; contador++)
@@ -96,7 +88,7 @@ void Escrever_dados()
   // Escreve os dados dos clientes ordenados no arquivo
   for (contador = 0; contador < Quantidade_Clientes; contador++)
   {
-    fprintf(Arquivo_Clientes, "Dados dos clientes:\n", contador + 1);
+    fprintf(Arquivo_Clientes, "Dados dos clientes:\n");
     fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador].Nome);
     fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
     fprintf(Arquivo_Clientes, "Codigo de Cliente:  %d\n\n", Clientes_Var[contador].Codigo_de_Cliente);

@@ -149,8 +149,7 @@ Caso Médio Complexidade: T(n)= O(n²). Acontece quando os elementos de um array
 Melhor Caso Complexidade: T(n) = O(n). Existe apenas n número de comparações, neste caso, complexa realidade é linear. Ocorre quando a entrada está parcialmente ordenada, resultando em um crescimento linear no tempo de execução em relação ao tamanho da entrada.
 
 # Análise da Complexidade do Espaço
-```latex
-
+```shell
 struct clientes{ //espaco constante
   char Nome[80]; // 80 bytes de espaço, pois cada caractere oculpa 1 byte
   char Endereco[80]; //80 bytes
@@ -186,6 +185,7 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 // a complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada Clientes_Var ou Quantidade_Clientes.
 
 ```
+
 Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.
 
 

@@ -1,25 +1,4 @@
-
 #include "cliente.h"
-
-int Contador_Clientes();
-int main(){
-    int Quantidade_Clientes = Contador_Clientes();
-    Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes);
-    if (Clientes_Var == NULL) {
-        printf("Erro na alocação de memória\n");
-        return 1;
-    }
-
-    Ler_Dados(Clientes_Var, Quantidade_Clientes);
-
-   insertionSort(Clientes_Var,Quantidade_Clientes);
-
-    Escrever_dados(Clientes_Var, Quantidade_Clientes);
-
-    free(Clientes_Var);
-
-    return 0;
-}
 
 int Contador_Clientes() {
     char linha[200];

@@ -30,7 +30,6 @@ int main()
       scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Endereco);
       printf("Digite o codigo do cliente\n");
       scanf("%d", &Clientes_Var[Quantidade_Clientes].Codigo_de_Cliente);
-      printf("nome do cliente %d e == %s\n", Quantidade_Clientes, Clientes_Var[Quantidade_Clientes].Nome);
       Quantidade_Clientes++;
       permanencia = 1;
     }
@@ -40,6 +39,8 @@ int main()
   {
     string_maiuscula_minuscula(Clientes_Var[contador].Nome);
   }
+
+  Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes);
 
   // Chama a função Escrever_dados que foi implementada no cliente.c
   Escrever_dados(Clientes_Var, Quantidade_Clientes);

@@ -135,5 +135,45 @@ O pior e médio caso do algoritmo de ordenação Insertion Sort é T(n) = O(n²)
 O melhor caso 
 
 # Análise da Complexidade do Espaço
+```latex
+
+struct clientes{ //espaco constante
+  char Nome[80]; // 80 bytes de espaço, pois cada caractere oculpa 1 byte
+  char Endereco[80]; //80 bytes
+  int Codigo_de_Cliente; // 4 bytes pois é um inteiro
+};
+
+void Escrever_dados() { //espaço constante, pois é uma função
+  int Quantidade_Clientes; //4 bytes
+  int contador; // 4 bytes
+
+ Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); 
+ O(Quantidade_Clientes).
+  
+FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+"); //Ocupa um espaço constante, pois é uma operação de abertura de arquivo.
+
+ LOOP for (contador = 0; contador < Quantidade_Clientes; contador++) { //O(Quantidade_Clientes).
+
+Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes); //oculpa um espaco constante
+
+fclose(Arquivo_Clientes); //Ocupa um espaço constante, pois é uma operação de fechamento de arquivo.
+  
+  free(Clientes_Var); //Ocupa um espaço constante, pois é uma operação de liberação de memória.
+
+void string_maiuscula_minuscula(char *str) { //chamada de uma função, espaço constante
+  int i; //oculpa 4 bytes, espaco constante
+//A complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada str.
+
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+  int i, j; //duas variaveis inteiras, cada um oculpa 4 bytes, epaço constante
+  // cria a variavel que vai servir de parametro na verificação abaixo
+ 
+ Clientes key; //A variável key é uma estrutura Clientes, que ocupa um espaço fixo
+// a complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada Clientes_Var ou Quantidade_Clientes.
+
+```
+Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.
+
+
 ##
 S(P)=c + Sp

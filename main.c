@@ -1,4 +1,4 @@
-#include "cliente.h"
+#include "cliente.c"
 
 int main() {
   // Aloca memória para armazenar os dados dos clientes

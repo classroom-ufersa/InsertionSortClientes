@@ -1,5 +1,9 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 typedef struct clientes {
     char Nome[80];

@@ -1,6 +1,9 @@
 #ifndef CLIENTES_H
 #define CLIENTES_H
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 /*Renomeacao de um tipo estruturado para Clientes*/
 typedef struct clientes Clientes;
 

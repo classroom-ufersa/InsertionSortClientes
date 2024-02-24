@@ -1,5 +1,5 @@
 # Problemática  
-Implementar um algoritmo que manipula um tipo estruturado **Clientes** e mantém os clientes ordenados por código em um arquivo usando **Insertion Sort**.
+- [x] Implementar um algoritmo que manipula um tipo estruturado **Clientes** e mantém os clientes ordenados por código em um arquivo usando **Insertion Sort**.
 
 ## Desenvolvedores
 > [Daniel Neres ](https://github.com/DanielNeres)
@@ -29,6 +29,8 @@ Implementar um algoritmo que manipula um tipo estruturado **Clientes** e mantém
 > [Implementação](#implementação)
 > 
 > [Análise Big-O](#análise-de-complexidade-do-tempo)
+> 
+> [Análise da Complexidade do Espaço](#análise-de-complexidade-do-espaço)
 
 ***
 
@@ -44,43 +46,39 @@ gcc -o main main.c
 
 # Strings com insertion sort
 **Ordenação de strings com Inserion Sort**
-O Insertion Sort, ou "Ordenação por Inserção", é um algoritmo de ordenação por inserção que realiza iteração pelos índices do array.
+- [x] O Insertion Sort, ou "Ordenação por Inserção", é um algoritmo de ordenação por inserção que realiza iteração pelos índices do array.
 
 ***
 
 ## Como funciona o Insertion Sort
-> Imagine uma professora organizando alunos em uma fila por idade, do mais novo para o mais velho. Ela começa com o primeiro aluno (primeira posição do vetor) e considera ele como ordenado. Em seguida, ela pega cada aluno subsequente (segunda posição em diante) e o coloca na posição correta em relação aos alunos anteriores, movendo-os conforme necessário. Esse processo continua até que todos os alunos estejam ordenados por idade, do mais novo para o mais velho.
->  
-
+- [x] Imagine uma professora organizando alunos em uma fila por idade, do mais novo para o mais velho. Ela começa com o primeiro aluno (primeira posição do vetor) e considera ele como ordenado. Em seguida, ela pega cada aluno subsequente (segunda posição em diante) e o coloca na posição correta em relação aos alunos anteriores, movendo-os conforme necessário. Esse processo continua até que todos os alunos estejam ordenados por idade, do mais novo para o mais velho.
 Suponha que temos a seguinte fila de alunos desorganizada, representada por um vetor de idades: [5, 2, 4, 6, 1, 3].
 
-## -Inicialização (resultado inicial):
+### Inicialização (resultado inicial):
+- [x] Fila inicial: [5, 2, 4, 6, 1, 3].
 
-Fila inicial: [5, 2, 4, 6, 1, 3].
- ## -Implementação (implementação do algoritmo):
-
-A professora considera o primeiro aluno (idade 5) como ordenado.
+### Implementação (implementação do algoritmo):
+- [x] A professora considera o primeiro aluno (idade 5) como ordenado.
 Pega o segundo aluno (idade 2) e o coloca na posição correta em relação ao primeiro aluno.
-Fila: [2, 5, 4, 6, 1, 3].
- ## -Ordenação:
+- [x] Fila: [2, 5, 4, 6, 1, 3].
 
-O terceiro aluno (idade 4) é comparado com os alunos anteriores e inserido na posição correta.
-Fila: [2, 4, 5, 6, 1, 3].
- ## -Resultados intermediários:
+### Ordenação:
+- [x] O terceiro aluno (idade 4) é comparado com os alunos anteriores e inserido na posição correta.
+- [x] Fila: [2, 4, 5, 6, 1, 3].
 
-O quarto aluno (idade 6) é comparado com os alunos anteriores e não precisa ser movido.
-Fila: [2, 4, 5, 6, 1, 3].
-## -Resultado final:
+### Resultados intermediários:
+- [x] O quarto aluno (idade 6) é comparado com os alunos anteriores e não precisa ser movido.
+- [x] Fila: [2, 4, 5, 6, 1, 3].
 
-O quinto aluno (idade 1) é comparado com os alunos anteriores e movido para a posição correta.
-Fila: [1, 2, 4, 5, 6, 3].
-# Conclusão (resultado final e conclusão):
+### Resultado final:
+- [x] O quinto aluno (idade 1) é comparado com os alunos anteriores e movido para a posição correta.
+- [x] Fila: [1, 2, 4, 5, 6, 3].
 
-O sexto aluno (idade 3) é comparado com os alunos anteriores e movido para a posição correta.
-Fila final ordenada: [1, 2, 3, 4, 5, 6].
-> ![Insertion Sort](https://markbowman.org/LCC/SortInsertion.gif)
+### Conclusão:
+- [x] O sexto aluno (idade 3) é comparado com os alunos anteriores e movido para a posição correta.
+- [x] Fila final ordenada: [1, 2, 3, 4, 5, 6].
 
-![Insertion Sort](https://camo.githubusercontent.com/ae22b4c49b217531d947a1e6825d400d3cb51d9c7cd11d1790eba04060e88c3e/68747470733a2f2f6d61726b626f776d616e2e6f72672f4c43432f536f7274496e73657274696f6e2e676966)
+![Insertion Sort](https://markbowman.org/LCC/SortInsertion.gif)
 
 ***
 
@@ -134,3 +132,48 @@ O pior e médio caso do algoritmo de ordenação Insertion Sort é T(n) = O(n²)
 
     T(n) = O(n²)
  ```
+O melhor caso 
+
+# Análise da Complexidade do Espaço
+```latex
+
+struct clientes{ //espaco constante
+  char Nome[80]; // 80 bytes de espaço, pois cada caractere oculpa 1 byte
+  char Endereco[80]; //80 bytes
+  int Codigo_de_Cliente; // 4 bytes pois é um inteiro
+};
+
+void Escrever_dados() { //espaço constante, pois é uma função
+  int Quantidade_Clientes; //4 bytes
+  int contador; // 4 bytes
+
+ Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); 
+ O(Quantidade_Clientes).
+  
+FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+"); //Ocupa um espaço constante, pois é uma operação de abertura de arquivo.
+
+ LOOP for (contador = 0; contador < Quantidade_Clientes; contador++) { //O(Quantidade_Clientes).
+
+Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes); //oculpa um espaco constante
+
+fclose(Arquivo_Clientes); //Ocupa um espaço constante, pois é uma operação de fechamento de arquivo.
+  
+  free(Clientes_Var); //Ocupa um espaço constante, pois é uma operação de liberação de memória.
+
+void string_maiuscula_minuscula(char *str) { //chamada de uma função, espaço constante
+  int i; //oculpa 4 bytes, espaco constante
+//A complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada str.
+
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+  int i, j; //duas variaveis inteiras, cada um oculpa 4 bytes, epaço constante
+  // cria a variavel que vai servir de parametro na verificação abaixo
+ 
+ Clientes key; //A variável key é uma estrutura Clientes, que ocupa um espaço fixo
+// a complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada Clientes_Var ou Quantidade_Clientes.
+
+```
+Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.
+
+
+##
+S(P)=c + Sp

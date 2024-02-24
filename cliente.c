@@ -33,7 +33,6 @@ void Ler_Dados(Clientes *Clientes_Var, int Quantidade_Clientes)
   for (contador = 0; contador < Quantidade_Clientes; contador++)
   {
     fscanf(Arquivo_Clientes, "Dados dos clientes:\nNome: %[^\n]\nEndereco: %[^\n]\nCodigo de Cliente: %d\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, &Clientes_Var[contador].Codigo_de_Cliente);
-    printf("nome do cliente %d e == %s\n", contador, Clientes_Var[contador].Nome);
   }
   fclose(Arquivo_Clientes);
 }

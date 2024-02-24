@@ -57,19 +57,19 @@ void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes)
   fclose(Arquivo_Clientes);
 }
 
-void string_maiuscula_minuscula(char *str)
+void string_maiuscula_minuscula(char *Nome)
 {
-  int i;
-  str[0] = toupper(str[0]);
-  for (i = 1; str[i] != '\0'; i++)
+  int Contador;
+  Nome[0] = toupper(Nome[0]);
+  for (Contador = 1; Nome[Contador] != '\0'; Contador++)
   {
-    if (isspace(str[i - 1]))
+    if (isspace(Nome[Contador - 1]))
     {
-      str[i] = toupper(str[i]);
+      Nome[Contador] = toupper(Nome[Contador]);
     }
     else
     {
-      str[i] = tolower(str[i]);
+      Nome[Contador] = tolower(Nome[Contador]);
     }
   }
 }

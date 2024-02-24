@@ -3,7 +3,7 @@
 int main()
 {
   // Aloca memória para armazenar os dados dos clientes
-  int permanencia;
+  int permanencia, contador;
   char Escolha;
   int Quantidade_Clientes = Contador_Clientes();
   Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes);
@@ -36,12 +36,11 @@ int main()
     }
   } while (permanencia == 1);
 
-  for (; 0 < Quantidade_Clientes; Quantidade_Clientes--)
+  for (contador = 0; contador < Quantidade_Clientes; contador++)
   {
-    string_maiuscula_minuscula(Clientes_Var[Quantidade_Clientes - 1].Nome);
+    string_maiuscula_minuscula(Clientes_Var[contador].Nome);
   }
 
-  Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes);
   // Chama a função Escrever_dados que foi implementada no cliente.c
   Escrever_dados(Clientes_Var, Quantidade_Clientes);
 

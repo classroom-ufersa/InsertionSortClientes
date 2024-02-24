@@ -13,6 +13,12 @@ int main() {
 
   Ler_Dados(Clientes_Var, Quantidade_Clientes);
 
+  int contador;
+  for (contador = 0; contador < Quantidade_Clientes; contador++)
+  {
+    printf("nome do cliente %d e == %s\n", contador, Clientes_Var[contador].Nome);
+  }
+
   do
   {
     permanencia = 0;
@@ -20,18 +26,18 @@ int main() {
     scanf(" %c", &Escolha);
     Escolha = toupper(Escolha);
     if (Escolha == 'S'){
+      Clientes_Var = realloc(Clientes_Var, (Quantidade_Clientes + 1) * sizeof(Clientes_Var));
       printf("Digite o nome do cliente\n");
       scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Nome);
       printf("Digite o endereco do cliente\n");
-      scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Nome);
+      scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Endereco);
       printf("Digite o codigo do cliente\n");
-      scanf("%d", &Clientes_Var[Quantidade_Clientes].Nome);
+      scanf("%d", &Clientes_Var[Quantidade_Clientes].Codigo_de_Cliente);
+      printf("nome do cliente %d e == %s\n", Quantidade_Clientes, Clientes_Var[Quantidade_Clientes].Nome);
       Quantidade_Clientes++;
       permanencia = 1;
     }
   }while(permanencia == 1);
-
-  Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes);
 
   // Chama a função Escrever_dados que foi implementada no cliente.c
   Escrever_dados(Clientes_Var, Quantidade_Clientes);

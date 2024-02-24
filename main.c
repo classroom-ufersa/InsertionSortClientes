@@ -17,19 +17,19 @@ int main() {
   {
     permanencia = 0;
     printf("Caso desege cadastrar algun cliente digite \"S\"\n");
-    scanf("%c", &Escolha);
+    scanf(" %c", &Escolha);
     Escolha = toupper(Escolha);
     if (Escolha == 'S'){
       printf("Digite o nome do cliente\n");
-      scanf("%[^\n]", Clientes_Var[Quantidade_Clientes].Nome);
+      scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Nome);
       printf("Digite o endereco do cliente\n");
-      scanf("%[^\n]", Clientes_Var[Quantidade_Clientes].Nome);
+      scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Nome);
       printf("Digite o codigo do cliente\n");
       scanf("%d", &Clientes_Var[Quantidade_Clientes].Nome);
       Quantidade_Clientes++;
       permanencia = 1;
     }
-  }while(permanencia = 1);
+  }while(permanencia == 1);
 
   Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes);
 

@@ -44,9 +44,16 @@ gcc -o main main.c
 ```
 ***
 
-# Strings com insertion sort
+# Strings com Insertion Sort
 **Ordenação de strings com Inserion Sort**
-- [x] O Insertion Sort, ou "Ordenação por Inserção", é um algoritmo de ordenação por inserção que realiza iteração pelos índices do array.
+- [x] O Insertion Sort, ou "Ordenação por Inserção", é um dos algoritmos de classificação por comparação usados ​​para classificar elementos, iterando um elemento por vez e colocando o elemento em sua posição correta. O algoritmo de classificação por inserção garante que os primeiros k elementos sejam classificados após a k-ésima iteração.
+- [x] Implementa-se um loop que se repete sobre um array, iniciando a partir do segundo elemento (índice 1) e percorre todos os elementos até o final. Dentro deste loop, existe outro loop while que compara o elemento atual com o elemento anterior e, caso o elemento atual for menor que o anterior, as posições são trocadas. Diante disso, o loop while continua até que o elemento atual esteja na posição correta.
+
+**Propriedades do Insertion Sort**
+- Online: Classificar os elementos à medida que os recebe. Caso seja acrescentado mais alguns elementos às listas, é feito apenas a iteração nos elementos recém-adicionados.
+- No lugar: O espaço é constante e não requer espaço extra. Este algoritmo classifica os elementos no lugar.
+- Estável: Não troca os elementos se seus valores forem iguais. 
+- Adaptável: A algoritmo de classificação é adaptativo se levar menos tempo, se os elementos de entrada ou subconjunto de elementos já estiverem classificados. Sendo assim, o tempo de execução do melhor caso é O(N) e o pior tempo de execução é O(N^2). A classificação por inserção é um dos algoritmos de classificação adaptativa.
 
 ***
 
@@ -116,7 +123,9 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 
 # Análise de complexidade do tempo
 ## Big-O
-O pior e médio caso do algoritmo de ordenação Insertion Sort é T(n) = O(n²), indicando que o tempo de execução cresce quadraticamente conforme o tamanho da entrada aumenta. O melhor caso desse algoritmo é T(n) = O(n), quando a entrada está parcialmente ordenada, resultando em um crescimento linear no tempo de execução em relação ao tamanho da entrada.
+
+**Pior Caso**
+Pior Caso Complexidade: T(n) = O(n²). Classificar um array em ordem cresccente quando ele está em ordem decrescente é o pior cenário. Indica que o tempo de execução cresce quadraticamente conforme o tamanho da entrada aumenta.
 ```latex
    T(n) = c1 + (c2+c3+c4+c8)(n-1) + n(n-1)(c5+c6+c7)
 
@@ -132,24 +141,50 @@ O pior e médio caso do algoritmo de ordenação Insertion Sort é T(n) = O(n²)
 
     T(n) = O(n²)
  ```
-O melhor caso 
+
+**Caso Médio**
+Caso Médio Complexidade: T(n)= O(n²). Acontece quando os elementos de um array ocorrem em ordem confusa, que não é crescente nem decrescente. 
+
+**Melhor Caso**
+Melhor Caso Complexidade: T(n) = O(n). Existe apenas n número de comparações, neste caso, complexa realidade é linear. Ocorre quando a entrada está parcialmente ordenada, resultando em um crescimento linear no tempo de execução em relação ao tamanho da entrada.
 
 # Análise da Complexidade do Espaço
 ```latex
 
-A complexidade de espaço de um algoritmo é a quantidade de memória (espaço) que o algoritmo utiliza em relação ao tamanho da entrada. Geralmente é medida em termos de quantidade de armazenamento adicional necessário para executar o algoritmo, além da própria entrada
+struct clientes{ //espaco constante
+  char Nome[80]; // 80 bytes de espaço, pois cada caractere oculpa 1 byte
+  char Endereco[80]; //80 bytes
+  int Codigo_de_Cliente; // 4 bytes pois é um inteiro
+};
 
-Variáveis locais:
-i, j e Quantidade_Clientes são do tipo int, que geralmente ocupam 4 bytes cada em sistemas de 64 bits.
-A variável key é do tipo Clientes, que pode ser considerada como ocupando cerca de 2×N+16 bytes, onde N é o tamanho máximo dos campos Nome e Endereco.
-Ponteiro Clientes_Var: O ponteiro Clientes_Var é um ponteiro para um vetor de structs Clientes, que ocuparia 8 bytes em um sistema de 64 bits.
-Portanto, a parte fixa e constante (c) seria:
-c=4 bytes (int i)+4 bytes (int j)+4 bytes (int Quantidade_Clientes)+(2×N+16) bytes (Clientes key)+8 bytes (Clientes_Var)
-c=20+2×N+16
-A parte variável (Sp) seria principalmente devido ao vetor de ponteiros para a Struct Clientes, que aponta para os elementos ordenados. Se considerarmos que cada ponteiro ocupa 8 bytes em um sistema de 64 bits, a parte variável seria de 8×N bytes.
-Portanto, a complexidade de espaço para a função insertionSort em um sistema de 64 bits seria
-S(P)=c+Sp=20+2×N+16+8×N
-36+10×N bytes.
+void Escrever_dados() { //espaço constante, pois é uma função
+  int Quantidade_Clientes; //4 bytes
+  int contador; // 4 bytes
+
+ Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); 
+ O(Quantidade_Clientes).
+  
+FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+"); //Ocupa um espaço constante, pois é uma operação de abertura de arquivo.
+
+ LOOP for (contador = 0; contador < Quantidade_Clientes; contador++) { //O(Quantidade_Clientes).
+
+Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes); //oculpa um espaco constante
+
+fclose(Arquivo_Clientes); //Ocupa um espaço constante, pois é uma operação de fechamento de arquivo.
+  
+  free(Clientes_Var); //Ocupa um espaço constante, pois é uma operação de liberação de memória.
+
+void string_maiuscula_minuscula(char *str) { //chamada de uma função, espaço constante
+  int i; //oculpa 4 bytes, espaco constante
+//A complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada str.
+
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+  int i, j; //duas variaveis inteiras, cada um oculpa 4 bytes, epaço constante
+  // cria a variavel que vai servir de parametro na verificação abaixo
+ 
+ Clientes key; //A variável key é uma estrutura Clientes, que ocupa um espaço fixo
+// a complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada Clientes_Var ou Quantidade_Clientes.
+
 ```
 Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.
 

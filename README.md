@@ -127,7 +127,7 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 ## Big-O
 
 **Pior Caso**
-Pior Caso Complexidade: T(n) = O(n²). Classificar um array em ordem cresccente quando ele está em ordem decrescente é o pior cenário. Indica que o tempo de execução cresce quadraticamente conforme o tamanho da entrada aumenta.
+> Complexidade: T(n) = O(n²). Classificar um array em ordem cresccente quando ele está em ordem decrescente é o pior cenário. Indica que o tempo de execução cresce quadraticamente conforme o tamanho da entrada aumenta.
 ```c
   Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
   int count1, count2; //c1 - 1vez
@@ -158,7 +158,7 @@ Pior Caso Complexidade: T(n) = O(n²). Classificar um array em ordem cresccente 
  ```
 
 **Caso Médio**
-Caso Médio Complexidade: T(n)= O(n²). Acontece quando os elementos de um array ocorrem em ordem confusa, que não é crescente nem decrescente. 
+> Caso Médio Complexidade: T(n)= O(n²). Acontece quando os elementos de um array ocorrem em ordem confusa, que não é crescente nem decrescente. 
 
 ```c
   Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
@@ -190,7 +190,7 @@ Caso Médio Complexidade: T(n)= O(n²). Acontece quando os elementos de um array
  ```
 
 **Melhor Caso**
-Melhor Caso Complexidade: T(n) = O(n). Existe apenas n número de comparações, neste caso, complexa realidade é linear. Ocorre quando a entrada está parcialmente ordenada, resultando em um crescimento linear no tempo de execução em relação ao tamanho da entrada.
+> Melhor Caso Complexidade: T(n) = O(n). Existe apenas n número de comparações, neste caso, complexa realidade é linear. Ocorre quando a entrada está parcialmente ordenada, resultando em um crescimento linear no tempo de execução em relação ao tamanho da entrada.
 ```c
   Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
   int count1, count2; //c1 - 1vez
@@ -253,7 +253,7 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) { //com
 // a complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada Clientes_Var ou Quantidade_Clientes.
 
 ```
-O Insertion Sort é um algoritmo de ordenação que rearranja os elementos de uma lista, um por um, na ordem correta. Ele não precisa de espaço extra além da própria lista que está sendo ordenada. Isso significa que sua complexidade de espaço é constante, ou seja, O(1). 
+> O Insertion Sort é um algoritmo de ordenação que rearranja os elementos de uma lista, um por um, na ordem correta. Ele não precisa de espaço extra além da própria lista que está sendo ordenada. Isso significa que sua complexidade de espaço é constante, ou seja, O(1). 
 S(P)=c + Sp
-
-Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.
+> 
+> Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.

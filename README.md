@@ -278,7 +278,7 @@ return Clientes_Var; //c9 - 1 vez
  ```
 
 # Análise da Complexidade do Espaço
-**Análise da complexidade do espaço do Insertion Sort
+> Análise da complexidade do espaço do Insertion Sort
 ```c
 void insertionSort(int arr[], int n){ 
   int i, key, j;
@@ -290,7 +290,7 @@ void insertionSort(int arr[], int n){
       arr[j+1]=arr[j]; 
       j=j-1; 
     }
-    arr[j+1]=key; //
+    arr[j+1]=key; 
   }
 }
 ```

@@ -129,21 +129,23 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 **Pior Caso**
 > Complexidade: T(n) = O(n²). Classificar um array em ordem cresccente quando ele está em ordem decrescente é o pior cenário. Indica que o tempo de execução cresce quadraticamente conforme o tamanho da entrada aumenta.
 ```c
-  Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
-  int count1, count2; //c1 - 1vez
-  Clientes cliente_atual; 
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+	int count1, count2; //c1 - 1vez
+	Clientes cliente_atual; 
 
-  for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
-    cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
-    count2= count1 - 1; //c4 - (n-1)
+	for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
+		cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
+		count2= count1 - 1; //c4 - (n-1)
 
-	  while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
-      Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
-      count2--; //c7 - n(n-1)
-	  }
-    Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
-  }
-  return Clientes_Var; //c9 - 1 vez
+		while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
+			Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
+			count2--; //c7 - n(n-1)
+		}
+
+	Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
+  	}
+
+return Clientes_Var; //c9 - 1 vez
 }
 ```
 ```latex
@@ -161,21 +163,23 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 > Caso Médio Complexidade: T(n)= O(n²). Acontece quando os elementos de um array ocorrem em ordem confusa, que não é crescente nem decrescente. 
 
 ```c
-  Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
-  int count1, count2; //c1 - 1vez
-  Clientes cliente_atual; 
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+	int count1, count2; //c1 - 1vez
+	Clientes cliente_atual; 
 
-  for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
-    cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
-    count2= count1 - 1; //c4 - (n-1)
+	for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
+		cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
+		count2= count1 - 1; //c4 - (n-1)
 
-	  while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
-      Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
-      count2--; //c7 - n(n-1)
-	  }
-    Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
-  }
-  return Clientes_Var; //c9 - 1 vez
+		while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
+			Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
+			count2--; //c7 - n(n-1)
+		}
+
+	Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
+  	}
+
+return Clientes_Var; //c9 - 1 vez
 }
 ```
 ```latex
@@ -192,21 +196,23 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 **Melhor Caso**
 > Melhor Caso Complexidade: T(n) = O(n). Existe apenas n número de comparações, neste caso, complexa realidade é linear. Ocorre quando a entrada está parcialmente ordenada, resultando em um crescimento linear no tempo de execução em relação ao tamanho da entrada.
 ```c
-  Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
-  int count1, count2; //c1 - 1vez
-  Clientes cliente_atual; 
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+	int count1, count2; //c1 - 1vez
+	Clientes cliente_atual; 
 
-  for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
-    cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
-    count2= count1 - 1; //c4 - (n-1)
+	for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
+		cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
+		count2= count1 - 1; //c4 - (n-1)
 
-	  /*while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
-    Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
-      count2--; //c7 - n(n-1)
-	  }
-    Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
-  }*/
-  return Clientes_Var; //c9 - 1 vez
+		while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
+			Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
+			count2--; //c7 - n(n-1)
+		}
+
+	Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
+  	}
+
+return Clientes_Var; //c9 - 1 vez
 }
 ```
 ```latex

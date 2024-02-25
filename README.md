@@ -204,10 +204,10 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 		cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
 		count2= count1 - 1; //c4 - (n-1)
 
-		while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
+		/*while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
 			Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
 			count2--; //c7 - n(n-1)
-		}
+		}*/
 
 	Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
   	}

@@ -17,21 +17,26 @@ int main()
 
   do
   {
-    permanencia = 0;
+    permanencia = 0; // Torna falso a condição do loop, ou seja, caso não entre no if o loop se encerra
     printf("Caso desege cadastrar algun cliente digite \"S\"\n");
-    scanf(" %c", &Escolha);
-    Escolha = toupper(Escolha);
-    if (Escolha == 'S')
+    scanf(" %c", &Escolha); // Recebe a letra escolhida pelo o usuario
+    Escolha = toupper(Escolha); // Torna ela sempre maiuscula
+
+    if (Escolha == 'S') // Verifica se foi digitado 's' ou 'S'
     {
+      // Realoca a variavel clientes, afim de aumentar o vetor para receber os dados do novo cliente
       Clientes_Var = (Clientes *)realloc(Clientes_Var, (Quantidade_Clientes + 1) * sizeof(Clientes));
+
+      system("cls"); // Limpa tela
       printf("Digite o nome do cliente\n");
-      scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Nome);
+      scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Nome); // Recebe o nome do novo cliente
       printf("Digite o endereco do cliente\n");
-      scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Endereco);
+      scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Endereco); // Recebe o enderço do novo cliente
       printf("Digite o codigo do cliente\n");
-      scanf("%d", &Clientes_Var[Quantidade_Clientes].Codigo_de_Cliente);
-      Quantidade_Clientes++;
-      permanencia = 1;
+      scanf("%d", &Clientes_Var[Quantidade_Clientes].Codigo_de_Cliente); // Recebe o enderço do novo cliente
+
+      Quantidade_Clientes++; // Incrementa +1, afim de registrar o novo cliente cadastrado
+      permanencia = 1; // Torna verdadeira a condição do loop
     }
   } while (permanencia == 1);
 

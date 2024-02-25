@@ -103,16 +103,16 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
     cliente_atual = Clientes_Var[count1];
     count2= count1 - 1;
 
-    // Comparação completa dos nomes usando strcmp, verificando se Key.Nome tem letras "menores" que Clientes_Var[j].Nome
+    // Comparação completa dos nomes usando strcmp, verificando se cliente_atual.Nome tem letras "menores" que Clientes_Var[count2].Nome
     while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0) {
-      // sobrescreve o conteudo do vetor na posição mais a direita de j, pelo conteudo do vetor na posição j
-      // lembrando que se o loop for verdadeiro apenas 1 vez, a posição j + 1 = i
+      // sobrescreve o conteudo do vetor na posição mais a direita de count2, pelo conteudo do vetor na posição count2
+      // lembrando que se o loop for verdadeiro apenas 1 vez, a posição count2 + 1 = count1
       Clientes_Var[count2 + 1] = Clientes_Var[count2];
-      // decrementa 1 em j para continuar a verificação com na posição ainda mais a esquerda
+      // decrementa 1 em count2 para continuar a verificação com na posição ainda mais a esquerda
       count2--;
     }
-     // sobrescreve o conteudo do vetor na posição mais a direita de j + 1, pela key
-     // resaltando que soma-se +1 a j, pois ao final do loop se decrementa 1 de j
+     // sobrescreve o conteudo do vetor na posição mais a direita de count2 + 1, pelo cliente_atual
+     // resaltando que soma-se +1 a count2, pois ao final do loop se decrementa 1 de count2
     Clientes_Var[count2 + 1] = cliente_atual;
   }
   return Clientes_Var;
@@ -178,10 +178,10 @@ void string_maiuscula_minuscula(char *str) { //Espaço constante - chamada de um
 //A complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada str
 
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) { //complexidade de espaço = O(1)
-  int i, j; //duas variaveis inteiras, cada um oculpa 4 bytes, epaço constante
+  int count1,count2; //duas variaveis inteiras, cada um oculpa 4 bytes, epaço constante
   // cria a variavel que vai servir de parametro na verificação abaixo
  
- Clientes key; //A variável key é uma estrutura Clientes, que ocupa um espaço fixo
+ Clientes cliente_atual; //A variável key é uma estrutura Clientes, que ocupa um espaço fixo
 // a complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada Clientes_Var ou Quantidade_Clientes.
 
 ```

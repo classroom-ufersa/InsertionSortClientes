@@ -30,7 +30,7 @@ int main() {
       printf("Digite o endereco do cliente\n");
       scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Endereco); // Recebe o endereço do novo cliente.
       printf("Digite o codigo do cliente\n");
-      scanf("%d", &Clientes_Var[Quantidade_Clientes].Codigo_de_Cliente); // Recebe o enderço do novo cliente.
+      scanf("%lli", &Clientes_Var[Quantidade_Clientes].Codigo_de_Cliente); // Recebe o enderço do novo cliente.
 
       Quantidade_Clientes++; //Incrementa +1, afim de registrar o novo cliente cadastrado.
       permanencia = 1; //Torna verdadeira a condição do loop, afim de permanecer nele.

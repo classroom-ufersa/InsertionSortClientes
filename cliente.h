@@ -5,32 +5,32 @@
 #include <string.h>
 #include <ctype.h>
 
+/* Renomeação de um tipo estruturado para Clientes,
+   Recebe informações dos clientes*/
 typedef struct clientes {
     char Nome[80];
     char Endereco[80];
     long long int Codigo_de_Cliente;
-} Clientes; /*Cria Tipo estruturado Clientes e preenche seu campo
-**Recebe: Informações dos clientes (Nome, Endereço e codigo do cliente)
-**Retorna: Nada, ele apenas define uma estrutura de dados*/
+} Clientes;
 
-int Contador_Clientes();/*Função responsável por contar o numero de Clientes no arquivo "Clientes.txt"
-**Recebe:nenhum parâmetro
-**Retorna: Um inteiro representando a quantidade de clintes no arquivo*/
+/*Função responsável por contar o numero de clientes no arquivo "Clientes.txt,
+  Não recebe algum parâmetro, e retorna um inteiro representando a quantidade de clientes no arquivo*/
+int Contador_Clientes();
 
-void Ler_Dados(Clientes *Clientes_Var, int Quantidade_Clientes);/*Função para ler dados dos clientes no arquivo "clintes.txt" e armazena em uma estrutura de dados
-**Recebe: Um ponteiro para uma estrutura do tipo Clientes (Clientes_Var) e um inteiro representando a quantidade de clientes
-**Retorna:Nada, pois os dados são armazenados diretamente na estrutura passada por referência*/
+/*Função que ler os dados dos clientes armazenadas no arquivo "Clientes.txt" e armazena em uma estrutura de dados, 
+  Recebe como parâmetros um ponteiro do tipo Clientes e um inteiro que representa a quantidade de clientes*/
+void Ler_Dados(Clientes *Clientes_Var, int Quantidade_Clientes);
 
-void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes);/*Função para escrever os dados dos clientes no arquivo "Clientes.txt"
-**Recebe:Um ponteiro para uma estrutura do tipo Clientes (Clientes_Var) e um inteiro representando a quantidade de clientes
-**Retorna: Nada, pois os dados são escritos diretamente no arquivo*/
+/*Função que escreve os dados dos clientes no arquivo "Clientes.txt"
+  Recebe como parâmetros um ponteiro para uma estrutura do tipo Clientes e um inteiro representando a quantidade de clientes*/
+void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes);
 
-void string_maiuscula_minuscula(char *str);/*Função para converter a primeira letra de cada palavra em uma string para maiúscula e as demais letras para minúscula
-**Recebe: Um ponteiro para uma string contendo o nome
-**Retorna: Nada, pois a conversão é feita diretamente na string passada por referência*/
+/*Função que converte a primeira letra de cada palavra em uma string para maiúscula e as demais letras para minúscula,
+  Recebe como parâmetro um ponteiro para uma string contendo o nome*/
+void string_maiuscula_minuscula(char *str);
 
-Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes);/*Função que implementa o algoritmo de ordenação Insertion Sort para ordenar os clientes por nome
-**Recebe: Um ponteiro para um array de estruturas do tipo Clientes (Clientes_Var) e um inteiro representando a quantidade de clientes
-**Retorna: Um ponteiro para o array de clientes após a ordenação*/
+/*Função que implementa o algoritmo de ordenação Insertion Sort para ordenar os clientes em ordem alfabética,
+  Recebe como parâmtros um ponteiro para um array de estruturas do tipo Clientes e um inteiro representando a quantidade de clientes*/
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes);
 
 #endif /* CLIENTE_H */

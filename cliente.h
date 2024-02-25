@@ -8,7 +8,7 @@
 typedef struct clientes {
     char Nome[80];
     char Endereco[80];
-    int Codigo_de_Cliente;
+    long long int Codigo_de_Cliente;
 } Clientes;
 
 int Contador_Clientes();

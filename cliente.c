@@ -62,16 +62,21 @@ void string_maiuscula_minuscula(char *Nome){ //Criacao de uma funcao para mudar 
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes){
   int count1, count2; //Criacao de duas variaveis inteiras, para controlar um loop.
   Clientes cliente_atual; //Uma estrutura temporária para armazenar o cliente atual durante a ordenação.
+// começa um for que percorre todos os clientes exitentes
+  // começa em 1, pois necessita de um mais cliente a esquerda (que no caso e 0), para se efutar a comparação 
+  for (count1 = 1; count1 < Quantidade_Clientes; count1++)  { 
+    cliente_atual = Clientes_Var[count1]; //Armazena o cliente atual em cliente_atual.
+    count2 = count1 - 1; //Inicializa count2 com o índice anterior ao cliente atual.
 
-  for (count1 = 1; count1 < Quantidade_Clientes; count1++)  { //O loop  começa a partir do segundo elemento (índice 1)  evai percorrer até o último elemento do array.
-    cliente_atual = Clientes_Var[count1]; //Armazena o cliente atual em key.
-    count2 = count1 - 1; //Inicializa j com o índice anterior ao cliente atual.
+   while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ 
+// Comparação completa dos nomes usando strcmp, verificando se cliente_atual.Nome tem letras "menores" que Clientes_Var[count2].Nome
 
-   while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //Percorre a string Nome e enquanto j é maior ou igual a 0 e o nome do cliente em Clientes_Var[count2] é maior que o nome em cliente_atual vai mover o cliente em Clientes_Var[count2] para a próxima posição (Clientes_Var[count2+ 1]).
       Clientes_Var[count2+ 1] = Clientes_Var[count2];
-      count2--; //Decrementa count2.
+      // decrementa 1 em count2 para continuar a verificação com na posição ainda mais a esquerda
+      count2--; 
     }
-    Clientes_Var[count2 + 1] = cliente_atual; //Insere o cliente armazenado em cliente_atual na posição correta no array.
+    Clientes_Var[count2 + 1] = cliente_atual; // sobrescreve o conteudo do vetor na posição mais a direita de count2 + 1, pelo cliente_atual
+     // resaltando que soma-se +1 a count2, pois ao final do loop se decrementa 1 de count2
   }
 
   return Clientes_Var; //Retorna o ponteiro para o array Clientes_Var após a ordenação.

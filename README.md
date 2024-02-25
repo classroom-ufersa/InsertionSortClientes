@@ -126,42 +126,24 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 # Análise de complexidade do tempo
 ## Big-O
 
-**Pior Caso**
+## **Pior Caso**
 > Complexidade: T(n) = O(n²). Classificar um array em ordem cresccente quando ele está em ordem decrescente é o pior cenário. Indica que o tempo de execução cresce quadraticamente conforme o tamanho da entrada aumenta.
 ```c
-Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
-	int count1, count2; //c1 - 1vez
-	Clientes cliente_atual; 
-
-	for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
-		cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
-		count2= count1 - 1; //c4 - (n-1)
-
-		while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
-			Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
-			count2--; //c7 - n(n-1)
-		}
-
-	Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
-  	}
-
-return Clientes_Var; //c9 - 1 vez
+void insertionSort(int arr[], int n){
+  int i, key, j; // 1 vez, c1 
+  for(i=1;i<n; i++){ // n-1 vez, c2 
+    key=arr[i]; // n-1 vez, c3
+    j=i-1; // n-1 vez, c4
+    while(j>=0 && arr[j]>key){ 
+      arr[j+1]=arr[j]; 
+      j=j-1; 
+    }
+    arr[j+1]=key; //n-1 vez, c8 
+  }
 }
 ```
-```latex
-    T(n) = c1 + c9 + (c2+c3+c4+c8)(n-1) + n(n-1)(c5+c6+c7)
-    T(n) = c + b(n-1) + n(n-1)a
-    T(n) = c + bn - b + (n² - n)a
-    T(n) = c + bn - b + an² - an
-    T(n) = bn + an² - an
-    T(n) = n + n² - n
-    T(n) = n²
-    T(n) = O(n²)
- ```
 
-**Caso Médio**
-> Caso Médio Complexidade: T(n)= O(n²). Acontece quando os elementos de um array ocorrem em ordem confusa, que não é crescente nem decrescente. 
-
+> Análise da complexidade com base na implementação do Insertion Sort
 ```c
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 	int count1, count2; //c1 - 1vez
@@ -182,6 +164,8 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 return Clientes_Var; //c9 - 1 vez
 }
 ```
+
+> Cálculos para verificação da complexidade do tempo
 ```latex
     T(n) = c1 + c9 + (c2+c3+c4+c8)(n-1) + n(n-1)(c5+c6+c7)
     T(n) = c + b(n-1) + n(n-1)a
@@ -193,8 +177,76 @@ return Clientes_Var; //c9 - 1 vez
     T(n) = O(n²)
  ```
 
-**Melhor Caso**
+## **Caso Médio**
+> Caso Médio Complexidade: T(n)= O(n²). Acontece quando os elementos de um array ocorrem em ordem confusa, que não é crescente nem decrescente. 
+```c
+void insertionSort(int arr[], int n){
+  int i, key, j; // 1 vez, c1 
+  for(i=1;i<n; i++){ // n-1 vez, c2 
+    key=arr[i]; // n-1 vez, c3
+    j=i-1; // n-1 vez, c4
+    while(j>=0 && arr[j]>key){ 
+      arr[j+1]=arr[j]; 
+      j=j-1; 
+    }
+    arr[j+1]=key; //n-1 vez, c8 
+  }
+}
+```
+
+> Análise da complexidade com base na implementação do Insertion Sort
+```c
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+	int count1, count2; //c1 - 1vez
+	Clientes cliente_atual; 
+
+	for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
+		cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
+		count2= count1 - 1; //c4 - (n-1)
+
+		while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
+			Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
+			count2--; //c7 - n(n-1)
+		}
+
+	Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
+  	}
+
+return Clientes_Var; //c9 - 1 vez
+}
+```
+
+> Cálculos para verificação da complexidade do tempo
+```latex
+    T(n) = c1 + c9 + (c2+c3+c4+c8)(n-1) + n(n-1)(c5+c6+c7)
+    T(n) = c + b(n-1) + n(n-1)a
+    T(n) = c + bn - b + (n² - n)a
+    T(n) = c + bn - b + an² - an
+    T(n) = bn + an² - an
+    T(n) = n + n² - n
+    T(n) = n²
+    T(n) = O(n²)
+ ```
+
+## **Melhor Caso**
 > Melhor Caso Complexidade: T(n) = O(n). Existe apenas n número de comparações, neste caso, complexa realidade é linear. Ocorre quando a entrada está parcialmente ordenada, resultando em um crescimento linear no tempo de execução em relação ao tamanho da entrada.
+```c
+void insertionSort(int arr[], int n){
+  int i, key, j; // 1 vez, c1
+  for(i=1;i<n; i++){ // n-1 vez, c2 
+    key=arr[i]; // n-1 vez, c3
+    j=i-1; // n-1 vez, c4
+
+    while(j>=0 && arr[j]>key){ 
+      arr[j+1]=arr[j]; 
+      j=j-1; 
+    }
+    arr[j+1]=key; //n-1 vez, c8 
+  }
+}
+```
+
+> Análise da complexidade com base na implementação do Insertion Sort
 ```c
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 	int count1, count2; //c1 - 1vez
@@ -215,6 +267,7 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 return Clientes_Var; //c9 - 1 vez
 }
 ```
+
 ```latex
     T(n) = c1 + c9 + (c2+c3+c4+c8)(n-1) 
     T(n) = c + b(n-1)
@@ -224,8 +277,24 @@ return Clientes_Var; //c9 - 1 vez
     T(n) = O(n)
  ```
 
-
 # Análise da Complexidade do Espaço
+**Análise da complexidade do espaço do Insertion Sort
+```c
+void insertionSort(int arr[], int n){ 
+  int i, key, j;
+  for(i=1;i<n; i++){ 
+    key=arr[i];
+    j=i-1; 
+
+    while(j>=0 && arr[j]>key){ 
+      arr[j+1]=arr[j]; 
+      j=j-1; 
+    }
+    arr[j+1]=key; //
+  }
+}
+```
+> Análise da complexidade do espaço da implementação do Insertion Sort
 ```c
 struct clientes{ //Espaco constante
   char Nome[80]; // 80 bytes de espaço - Cada caractere oculpa 1 byte
@@ -237,7 +306,7 @@ void Escrever_dados() { //Espaço constante - função
   int Quantidade_Clientes; //4 bytes
   int contador; // 4 bytes
 
- Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); 
+Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); 
  O(Quantidade_Clientes).
 
 FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+"); //Espaço constante - operação de abertura de arquivo

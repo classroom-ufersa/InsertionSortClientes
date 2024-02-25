@@ -35,12 +35,14 @@
 ***
 
 # Compilação e execução
+> Compilando e executando programas em C no terminal do Windows
 ```shell
 git clone https://github.com/classroom-ufersa/InsertionSortClientes.git
 cd strings_com_insertion_sort
-cd c
-gcc -o main main.c
-./main
+gcc -o cliente.c
+gcc -o main.c
+gcc -o main.exe cliente.o main.o
+./main.exe
 ```
 ***
 
@@ -91,7 +93,7 @@ Pega o segundo aluno (idade 2) e o coloca na posição correta em relação ao p
 
 # Implementação
 **Insertion Sort**
-```C
+```c
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
   int count1, count2;
   // cria a variavel que vai servir de parametro na verificação abaixo
@@ -103,14 +105,14 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
     cliente_atual = Clientes_Var[count1];
     count2= count1 - 1;
 
-    // Comparação completa dos nomes usando strcmp, verificando se cliente_atual.Nome tem letras "menores" que Clientes_Var[count2].Nome
-    while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0) {
+  // Comparação completa dos nomes usando strcmp, verificando se cliente_atual.Nome tem letras "menores" que Clientes_Var[count2].Nome
+  while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0) {
       // sobrescreve o conteudo do vetor na posição mais a direita de count2, pelo conteudo do vetor na posição count2
       // lembrando que se o loop for verdadeiro apenas 1 vez, a posição count2 + 1 = count1
       Clientes_Var[count2 + 1] = Clientes_Var[count2];
       // decrementa 1 em count2 para continuar a verificação com na posição ainda mais a esquerda
       count2--;
-    }
+  }
      // sobrescreve o conteudo do vetor na posição mais a direita de count2 + 1, pelo cliente_atual
      // resaltando que soma-se +1 a count2, pois ao final do loop se decrementa 1 de count2
     Clientes_Var[count2 + 1] = cliente_atual;
@@ -126,30 +128,99 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 
 **Pior Caso**
 Pior Caso Complexidade: T(n) = O(n²). Classificar um array em ordem cresccente quando ele está em ordem decrescente é o pior cenário. Indica que o tempo de execução cresce quadraticamente conforme o tamanho da entrada aumenta.
+```c
+  Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+  int count1, count2; //c1 - 1vez
+  Clientes cliente_atual; 
+
+  for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
+    cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
+    count2= count1 - 1; //c4 - (n-1)
+
+	  while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
+      Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
+      count2--; //c7 - n(n-1)
+	  }
+    Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
+  }
+  return Clientes_Var; //c9 - 1 vez
+}
+```
 ```latex
-   T(n) = c1 + (c2+c3+c4+c8)(n-1) + n(n-1)(c5+c6+c7)
-
-    T(n) = c + b(n-1) + n(n-1)*a
-
+    T(n) = c1 + c9 + (c2+c3+c4+c8)(n-1) + n(n-1)(c5+c6+c7)
+    T(n) = c + b(n-1) + n(n-1)a
+    T(n) = c + bn - b + (n² - n)a
     T(n) = c + bn - b + an² - an
-
     T(n) = bn + an² - an
-
     T(n) = n + n² - n
-
     T(n) = n²
-
     T(n) = O(n²)
  ```
 
 **Caso Médio**
 Caso Médio Complexidade: T(n)= O(n²). Acontece quando os elementos de um array ocorrem em ordem confusa, que não é crescente nem decrescente. 
 
+```c
+  Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+  int count1, count2; //c1 - 1vez
+  Clientes cliente_atual; 
+
+  for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
+    cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
+    count2= count1 - 1; //c4 - (n-1)
+
+	  while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
+      Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
+      count2--; //c7 - n(n-1)
+	  }
+    Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
+  }
+  return Clientes_Var; //c9 - 1 vez
+}
+```
+```latex
+    T(n) = c1 + c9 + (c2+c3+c4+c8)(n-1) + n(n-1)(c5+c6+c7)
+    T(n) = c + b(n-1) + n(n-1)a
+    T(n) = c + bn - b + (n² - n)a
+    T(n) = c + bn - b + an² - an
+    T(n) = bn + an² - an
+    T(n) = n + n² - n
+    T(n) = n²
+    T(n) = O(n²)
+ ```
+
 **Melhor Caso**
 Melhor Caso Complexidade: T(n) = O(n). Existe apenas n número de comparações, neste caso, complexa realidade é linear. Ocorre quando a entrada está parcialmente ordenada, resultando em um crescimento linear no tempo de execução em relação ao tamanho da entrada.
+```c
+  Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+  int count1, count2; //c1 - 1vez
+  Clientes cliente_atual; 
+
+  for (count1 = 1; count1 < Quantidade_Clientes; count1++) { //c2 - (n-1)
+    cliente_atual = Clientes_Var[count1]; //c3 - (n-1)
+    count2= count1 - 1; //c4 - (n-1)
+
+	  /*while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ //c5 - n(n-1)
+    Clientes_Var[count2 + 1] = Clientes_Var[count2]; //c6 - n(n-1)
+      count2--; //c7 - n(n-1)
+	  }
+    Clientes_Var[count2 + 1] = cliente_atual; //c8 - (n-1)
+  }*/
+  return Clientes_Var; //c9 - 1 vez
+}
+```
+```latex
+    T(n) = c1 + c9 + (c2+c3+c4+c8)(n-1) 
+    T(n) = c + b(n-1)
+    T(n) = c + bn - b 
+    T(n) = bn
+    T(n) = n
+    T(n) = O(n)
+ ```
+
 
 # Análise da Complexidade do Espaço
-```shell
+```c
 struct clientes{ //Espaco constante
   char Nome[80]; // 80 bytes de espaço - Cada caractere oculpa 1 byte
   char Endereco[80]; //80 bytes
@@ -162,15 +233,12 @@ void Escrever_dados() { //Espaço constante - função
 
  Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); 
  O(Quantidade_Clientes).
-  
-FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+"); //Espaço constante - operação de abertura de arquivo
 
-LOOP for (contador = 0; contador < Quantidade_Clientes; contador++) { //O(Quantidade_Clientes)
+FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+"); //Espaço constante - operação de abertura de arquivo
+  for (contador = 0; contador < Quantidade_Clientes; contador++) { //O(Quantidade_Clientes)
 
 Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes); //oculpa um espaco constante
-
   fclose(Arquivo_Clientes); //Espaço constante - operação de fechamento de arquivo
-  
   free(Clientes_Var); //Espaço constante - operação de liberação de memória.
 
 void string_maiuscula_minuscula(char *str) { //Espaço constante - chamada de uma função
@@ -186,9 +254,6 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) { //com
 
 ```
 O Insertion Sort é um algoritmo de ordenação que rearranja os elementos de uma lista, um por um, na ordem correta. Ele não precisa de espaço extra além da própria lista que está sendo ordenada. Isso significa que sua complexidade de espaço é constante, ou seja, O(1). 
+S(P)=c + Sp
 
 Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.
-
-
-##
-S(P)=c + Sp

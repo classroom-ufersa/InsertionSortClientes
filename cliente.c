@@ -9,8 +9,8 @@ int Contador_Clientes(){ //funcao para contar o número de vezes que a string "D
     exit(1);
   }
   while (fgets(linha, 200, Arquivo_Clientes) != NULL) { //esse loop eh feito para ler uma linha do arquivo e armazená-la na variavel linha.
-    if (strstr(linha, "Dados dos clientes:")) { //lenr o arquivo linha por linha e usando a função strstr para buscar a string dentro de cada linha
-        // se apareceu a string "Dados dos clientes" se sim, a cada vez que aparecer,o contador Quantidade_Clientes eh incrementado
+    if (strstr(linha, "Dados dos clientes:")) { //Vai ler o arquivo linha por linha e usando a função strstr para buscar a string dentro de cada linha.
+        //Se apareceu a string "Dados dos clientes" se sim, a cada vez que aparecer,o contador Quantidade_Clientes eh incrementado.
       Quantidade_Clientes++;
     }
   }
@@ -44,17 +44,17 @@ void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes){ //criaçã
     fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
     fprintf(Arquivo_Clientes, "Codigo de Cliente:  %d\n\n", Clientes_Var[contador].Codigo_de_Cliente);
   }
-  fclose(Arquivo_Clientes); //fecha o arquivo de texto
+  fclose(Arquivo_Clientes); //Fecha o arquivo de texto.
 }
 
-void string_maiuscula_minuscula(char *Nome){ //criacao de uma funcao para mudar a primeira letra do 
-  int Contador;
-  Nome[0] = toupper(Nome[0]);
-  for (Contador = 1; Nome[Contador] != '\0'; Contador++)  {
-    if (isspace(Nome[Contador - 1]))  {
+void string_maiuscula_minuscula(char *Nome){ //Criacao de uma funcao para mudar a primeira letra do 
+  int Contador; //Criacao de uma variavel para ser utilizada no loop.
+  Nome[0] = toupper(Nome[0]);  //Converte o primeiro caractere da string para maiúscula
+  for (Contador = 1; Nome[Contador] != '\0'; Contador++)  { //Um loop eh inciado ele vai percorrer a string a partir do segundo caractere (Contador = 1) até encontrar o caractere nulo que indica o fim da string ('\0').
+    if (isspace(Nome[Contador - 1]))  { //Verifica se o caractere anterior (Nome[Contador - 1]) é um espaço em branco. Se for, converte o caractere atual para maiúscula usando toupper.
       Nome[Contador] = toupper(Nome[Contador]);
     } else  {
-      Nome[Contador] = tolower(Nome[Contador]);
+      Nome[Contador] = tolower(Nome[Contador]); // se nao converte para minúscula usando tolower.
     }
   }
 }

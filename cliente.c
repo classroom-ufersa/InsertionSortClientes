@@ -27,7 +27,7 @@ void Ler_Dados(Clientes *Clientes_Var, int Quantidade_Clientes){ //criação da 
   }
   for (contador = 0; contador < Quantidade_Clientes; contador++) { // percorre todos os clientes do arquivo
     //Usa fscanf para ler os dados dos cliente no arquivo.
-    fscanf(Arquivo_Clientes, "Dados dos clientes:\nNome: %[^\n]\nEndereco: %[^\n]\nCodigo de Cliente: %d\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, &Clientes_Var[contador].Codigo_de_Cliente);
+    fscanf(Arquivo_Clientes, "Dados dos clientes:\nNome: %[^\n]\nEndereco: %[^\n]\nCodigo de Cliente: %lli\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, &Clientes_Var[contador].Codigo_de_Cliente);
   }
   fclose(Arquivo_Clientes); //fecha o arquivo
 }
@@ -43,7 +43,7 @@ void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes){ //criaçã
     fprintf(Arquivo_Clientes, "Dados dos clientes:\n");
     fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador].Nome);
     fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
-    fprintf(Arquivo_Clientes, "Codigo de Cliente:  %d\n\n", Clientes_Var[contador].Codigo_de_Cliente);
+    fprintf(Arquivo_Clientes, "Codigo de Cliente:  %lli\n\n", Clientes_Var[contador].Codigo_de_Cliente);
   }
   fclose(Arquivo_Clientes); //Fecha o arquivo de texto.
 }

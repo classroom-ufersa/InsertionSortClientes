@@ -8,7 +8,7 @@
 >
 > [Letícia Vieira Gonçalves](https://github.com/LeticiaVieirg)
 >
-> [Maria Isabelly de Lima Sousa](https://github.com/isabellymrl)
+> [Maria Isabelly de Lima Sousa](https://github.com/isabellylimals)
 
 ## Requisitos atendidos
 - [x] A cada execução do programa os dados são carregados e armazenados em um arquivo de texto.
@@ -93,27 +93,27 @@ Pega o segundo aluno (idade 2) e o coloca na posição correta em relação ao p
 **Insertion Sort**
 ```C
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
-  int i, j;
+  int count1, count2;
   // cria a variavel que vai servir de parametro na verificação abaixo
-  Clientes key;
+  Clientes cliente_atual;
 
   // começa um for que percorre todos os clientes exitentes
   // começa em 1, pois necessita de um mais cliente a esquerda (que no caso e 0), para se efutar a comparação 
-  for (i = 1; i < Quantidade_Clientes; i++) {
-    key = Clientes_Var[i];
-    j = i - 1;
+  for (count1 = 1; count1 < Quantidade_Clientes; count1++) {
+    cliente_atual = Clientes_Var[count1];
+    count2= count1 - 1;
 
     // Comparação completa dos nomes usando strcmp, verificando se Key.Nome tem letras "menores" que Clientes_Var[j].Nome
-    while (j >= 0 && strcmp(Clientes_Var[j].Nome, key.Nome) > 0) {
+    while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0) {
       // sobrescreve o conteudo do vetor na posição mais a direita de j, pelo conteudo do vetor na posição j
       // lembrando que se o loop for verdadeiro apenas 1 vez, a posição j + 1 = i
-      Clientes_Var[j + 1] = Clientes_Var[j];
+      Clientes_Var[count2 + 1] = Clientes_Var[count2];
       // decrementa 1 em j para continuar a verificação com na posição ainda mais a esquerda
-      j--;
+      count2--;
     }
      // sobrescreve o conteudo do vetor na posição mais a direita de j + 1, pela key
      // resaltando que soma-se +1 a j, pois ao final do loop se decrementa 1 de j
-    Clientes_Var[j + 1] = key;
+    Clientes_Var[count2 + 1] = cliente_atual;
   }
   return Clientes_Var;
 }
@@ -177,7 +177,7 @@ void string_maiuscula_minuscula(char *str) { //Espaço constante - chamada de um
   int i; //4 bytes, espaco constante
 //A complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada str
 
-Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) { //complexidade de espaço = O(1)
   int i, j; //duas variaveis inteiras, cada um oculpa 4 bytes, epaço constante
   // cria a variavel que vai servir de parametro na verificação abaixo
  
@@ -185,6 +185,7 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 // a complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada Clientes_Var ou Quantidade_Clientes.
 
 ```
+O Insertion Sort é um algoritmo de ordenação que rearranja os elementos de uma lista, um por um, na ordem correta. Ele não precisa de espaço extra além da própria lista que está sendo ordenada. Isso significa que sua complexidade de espaço é constante, ou seja, O(1). 
 
 Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.
 

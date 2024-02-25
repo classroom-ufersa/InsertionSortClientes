@@ -150,32 +150,32 @@ Melhor Caso Complexidade: T(n) = O(n). Existe apenas n número de comparações,
 
 # Análise da Complexidade do Espaço
 ```shell
-struct clientes{ //espaco constante
-  char Nome[80]; // 80 bytes de espaço, pois cada caractere oculpa 1 byte
+struct clientes{ //Espaco constante
+  char Nome[80]; // 80 bytes de espaço - Cada caractere oculpa 1 byte
   char Endereco[80]; //80 bytes
-  int Codigo_de_Cliente; // 4 bytes pois é um inteiro
+  int Codigo_de_Cliente; // 4 bytes - inteiro
 };
 
-void Escrever_dados() { //espaço constante, pois é uma função
+void Escrever_dados() { //Espaço constante - função
   int Quantidade_Clientes; //4 bytes
   int contador; // 4 bytes
 
  Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); 
  O(Quantidade_Clientes).
   
-FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+"); //Ocupa um espaço constante, pois é uma operação de abertura de arquivo.
+FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+"); //Espaço constante - operação de abertura de arquivo
 
- LOOP for (contador = 0; contador < Quantidade_Clientes; contador++) { //O(Quantidade_Clientes).
+LOOP for (contador = 0; contador < Quantidade_Clientes; contador++) { //O(Quantidade_Clientes)
 
 Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes); //oculpa um espaco constante
 
-fclose(Arquivo_Clientes); //Ocupa um espaço constante, pois é uma operação de fechamento de arquivo.
+  fclose(Arquivo_Clientes); //Espaço constante - operação de fechamento de arquivo
   
-  free(Clientes_Var); //Ocupa um espaço constante, pois é uma operação de liberação de memória.
+  free(Clientes_Var); //Espaço constante - operação de liberação de memória.
 
-void string_maiuscula_minuscula(char *str) { //chamada de uma função, espaço constante
-  int i; //oculpa 4 bytes, espaco constante
-//A complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada str.
+void string_maiuscula_minuscula(char *str) { //Espaço constante - chamada de uma função
+  int i; //4 bytes, espaco constante
+//A complexidade de espaço dessa função é O(1), pois não depende do tamanho da entrada str
 
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
   int i, j; //duas variaveis inteiras, cada um oculpa 4 bytes, epaço constante

@@ -60,19 +60,19 @@ void string_maiuscula_minuscula(char *Nome){ //Criacao de uma funcao para mudar 
 }
 
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes){
-  int i, j;
-  Clientes key;
+  int i, j; //Criacao de duas variaveis inteiras, para controlar um loop.
+  Clientes key; //Uma estrutura temporária para armazenar o cliente atual durante a ordenação.
 
-  for (i = 1; i < Quantidade_Clientes; i++)  {
-    key = Clientes_Var[i];
-    j = i - 1;
+  for (i = 1; i < Quantidade_Clientes; i++)  { //O loop  começa a partir do segundo elemento (índice 1)  evai percorrer até o último elemento do array.
+    key = Clientes_Var[i]; //Armazena o cliente atual em key.
+    j = i - 1; //Inicializa j com o índice anterior ao cliente atual.
 
-    while (j >= 0 && strcmp(Clientes_Var[j].Nome, key.Nome) > 0){
+   while (j >= 0 && strcmp(Clientes_Var[j].Nome, key.Nome) > 0){ //Percorre a string Nome e enquanto j é maior ou igual a 0 e o nome do cliente em Clientes_Var[j] é maior que o nome em key vai mover o cliente em Clientes_Var[j] para a próxima posição (Clientes_Var[j + 1]).
       Clientes_Var[j + 1] = Clientes_Var[j];
-      j--;
+      j--; //Decrementa j
     }
-    Clientes_Var[j + 1] = key;
+    Clientes_Var[j + 1] = key; //Insere o cliente armazenado em key na posição correta no array.
   }
 
-  return Clientes_Var;
+  return Clientes_Var; //Retorna o ponteiro para o array Clientes_Var após a ordenação.
 }

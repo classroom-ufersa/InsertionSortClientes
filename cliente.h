@@ -29,6 +29,8 @@ void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes);
   Recebe como parâmetro um ponteiro para uma string contendo o nome*/
 void string_maiuscula_minuscula(char *str);
 
+/* Função que recebe uma string como parametro, e manipula a string até ela estiver somente com letras, 
+   sejam maiusculas ou minusculas*/
 void Tratamento_de_Dado(char *Nome);
 
 /*Função que implementa o algoritmo de ordenação Insertion Sort para ordenar os clientes em ordem alfabética,

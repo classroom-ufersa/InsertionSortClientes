@@ -38,6 +38,10 @@ int main() {
     string_maiuscula_minuscula(Clientes_Var[contador].Nome);
   }
 
+  for (contador = 0; contador < Quantidade_Clientes; contador++)  {
+    Tratamento_de_Dado(Clientes_Var[contador].Nome);
+  }
+
   Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes);
 
   Escrever_dados(Clientes_Var, Quantidade_Clientes);

@@ -29,6 +29,8 @@ void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes);
   Recebe como parâmetro um ponteiro para uma string contendo o nome*/
 void string_maiuscula_minuscula(char *str);
 
+void Tratamento_de_Dado(char *Nome);
+
 /*Função que implementa o algoritmo de ordenação Insertion Sort para ordenar os clientes em ordem alfabética,
   Recebe como parâmtros um ponteiro para um array de estruturas do tipo Clientes e um inteiro representando a quantidade de clientes*/
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes);

@@ -39,8 +39,8 @@
 ```shell
 git clone https://github.com/classroom-ufersa/InsertionSortClientes.git
 cd strings_com_insertion_sort
-gcc -o cliente.c
-gcc -o main.c
+gcc -c cliente.c
+gcc -c main.c
 gcc -o main.exe cliente.o main.o
 ./main.exe
 ```

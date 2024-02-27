@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <time.h>
 
 /* Renomeação de um tipo estruturado para Clientes,
    Recebe informações dos clientes*/

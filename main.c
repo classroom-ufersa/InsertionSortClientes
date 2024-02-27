@@ -2,6 +2,10 @@
 
 int main() {
 
+  clock_t Tempo_Inicial, Tempo_Final;
+  double Tempo_Total;
+  Tempo_Inicial = clock();
+
   int permanencia, contador;
   char Escolha;
   int Quantidade_Clientes = Contador_Clientes();
@@ -47,6 +51,9 @@ int main() {
   Escrever_dados(Clientes_Var, Quantidade_Clientes);
 
   free(Clientes_Var);
+
+  Tempo_Total = (double)(Tempo_Final - Tempo_Inicial) / CLOCKS_PER_SEC;
+  printf("Tempo de execução: %.9f segundos\n", Tempo_Total);
 
   return 0;
 }

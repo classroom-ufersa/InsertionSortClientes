@@ -336,5 +336,6 @@ S(P)=c + Sp
 > Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.
 
 # Referências:
-Uso de inteligência artifical para uma melhor explicação da função.
+Foi utilizado nesse projeto, ajuda de uma inteligência artificial;
+https://chat.openai.com/
 

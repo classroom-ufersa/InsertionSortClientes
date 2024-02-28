@@ -8,6 +8,7 @@ int main() {
 
   int permanencia, contador;
   char Escolha;
+  char String_Codigo[40];
   int Quantidade_Clientes = Contador_Clientes();
   Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes);
   if (Clientes_Var == NULL) {
@@ -31,8 +32,10 @@ int main() {
       printf("Digite o endereco do cliente\n");
       scanf(" %[^\n]", Clientes_Var[Quantidade_Clientes].Endereco);
       printf("Digite o codigo do cliente\n");
-      scanf("%lli", &Clientes_Var[Quantidade_Clientes].Codigo_de_Cliente);
-
+      scanf(" %[^\n]", String_Codigo);
+      Tratamento_de_Dado_Codigo(String_Codigo);
+      Clientes_Var[Quantidade_Clientes].Codigo_de_Cliente = atoll(String_Codigo);
+      
       Quantidade_Clientes++;
       permanencia = 1;
     }
@@ -43,7 +46,7 @@ int main() {
   }
 
   for (contador = 0; contador < Quantidade_Clientes; contador++)  {
-    Tratamento_de_Dado(Clientes_Var[contador].Nome);
+    Tratamento_de_Dado_Nome(Clientes_Var[contador].Nome);
   }
 
   Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes);

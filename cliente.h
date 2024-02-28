@@ -32,7 +32,9 @@ void string_maiuscula_minuscula(char *str);
 
 /* Função que recebe uma string como parametro, e manipula a string até ela estiver somente com letras, 
    sejam maiusculas ou minusculas*/
-void Tratamento_de_Dado(char *Nome);
+void Tratamento_de_Dado_Nome(char *Nome);
+
+void Tratamento_de_Dado_Codigo(char *String_Codigo);
 
 /*Função que implementa o algoritmo de ordenação Insertion Sort para ordenar os clientes em ordem alfabética,
   Recebe como parâmtros um ponteiro para um array de estruturas do tipo Clientes e um inteiro representando a quantidade de clientes*/

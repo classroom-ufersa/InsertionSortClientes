@@ -52,8 +52,9 @@ int main() {
 
   free(Clientes_Var);
 
-  Tempo_Total = (double)(Tempo_Final - Tempo_Inicial) / CLOCKS_PER_SEC;
-  printf("Tempo de execução: %.9f segundos\n", Tempo_Total);
+  Tempo_Final = clock();
+  Tempo_Total = (double)(Tempo_Final - Tempo_Inicial) / 1000000;
+  printf("Tempo de execucao: %lf segundos\n", Tempo_Total);
 
   return 0;
 }

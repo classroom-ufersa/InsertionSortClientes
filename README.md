@@ -64,12 +64,14 @@ gcc -o main.exe cliente.o main.o
 Suponha que temos a seguinte fila de alunos desorganizada, representada por um vetor de idades: [5, 2, 4, 6, 1, 3].
 
 ### Inicialização (resultado inicial):
-- [x] Fila inicial: [5, 2, 4, 6, 1, 3].
+- [x] Fila inicial: [8, 7, 6].
 
 ### Implementação (implementação do algoritmo):
-- [x] A professora considera o primeiro aluno (idade 5) como ordenado.
-Pega o segundo aluno (idade 2) e o coloca na posição correta em relação ao primeiro aluno.
-- [x] Fila: [2, 5, 4, 6, 1, 3].
+Pega o segundo aluno (idade 7) e o coloca de lado(no caso do código e armazena em uma variavel) e reescreve o 8 na posição do na prosição do 7
+enquanto a criança de idade 7 está de lado.
+- [x] Fila: [8, 8,6].
+Depois decrementa o 8 da primeira posição, e acrescenta o 7
+ -[x] Fila[7,8,6]
 
 ### Ordenação:
 - [x] O terceiro aluno (idade 4) é comparado com os alunos anteriores e inserido na posição correta.
@@ -332,3 +334,7 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) { //com
 S(P)=c + Sp
 > 
 > Portanto, a complexidade de espaço total do código é dominada pela alocação de memória na função Escrever_dados(), resultando em O(Quantidade_Clientes) em termos de quantidades significativas de memória alocada. As demais operações ocupam um espaço constante adicional.
+
+# Referências:
+Uso de inteligência artifical para uma melhor explicação da função.
+

@@ -2,6 +2,10 @@
 
 int main() {
 
+  clock_t Tempo_Inicial, Tempo_Final;
+  double Tempo_Total;
+  Tempo_Inicial = clock();
+
   int permanencia, contador;
   char Escolha;
   int Quantidade_Clientes = Contador_Clientes();
@@ -38,11 +42,19 @@ int main() {
     string_maiuscula_minuscula(Clientes_Var[contador].Nome);
   }
 
+  for (contador = 0; contador < Quantidade_Clientes; contador++)  {
+    Tratamento_de_Dado(Clientes_Var[contador].Nome);
+  }
+
   Clientes_Var = insertionSort(Clientes_Var, Quantidade_Clientes);
 
   Escrever_dados(Clientes_Var, Quantidade_Clientes);
 
   free(Clientes_Var);
+
+  Tempo_Final = clock();
+  Tempo_Total = (double)(Tempo_Final - Tempo_Inicial) / 1000000;
+  printf("Tempo de execucao: %lf segundos\n", Tempo_Total);
 
   return 0;
 }

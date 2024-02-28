@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <time.h>
 
 /* Renomeação de um tipo estruturado para Clientes,
    Recebe informações dos clientes*/
@@ -28,6 +29,10 @@ void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes);
 /*Função que converte a primeira letra de cada palavra em uma string para maiúscula e as demais letras para minúscula,
   Recebe como parâmetro um ponteiro para uma string contendo o nome*/
 void string_maiuscula_minuscula(char *str);
+
+/* Função que recebe uma string como parametro, e manipula a string até ela estiver somente com letras, 
+   sejam maiusculas ou minusculas*/
+void Tratamento_de_Dado(char *Nome);
 
 /*Função que implementa o algoritmo de ordenação Insertion Sort para ordenar os clientes em ordem alfabética,
   Recebe como parâmtros um ponteiro para um array de estruturas do tipo Clientes e um inteiro representando a quantidade de clientes*/

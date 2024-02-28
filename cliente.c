@@ -44,7 +44,7 @@ void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes){
     fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
     fprintf(Arquivo_Clientes, "Codigo de Cliente:  %lli\n\n", Clientes_Var[contador].Codigo_de_Cliente);
   }
-  fclose(Arquivo_Clientes); .
+  fclose(Arquivo_Clientes);
 }
 
 void string_maiuscula_minuscula(char *Nome){ 
@@ -59,12 +59,25 @@ void string_maiuscula_minuscula(char *Nome){
   }
 }
 
+void Tratamento_de_Dado(char *Nome){
+  int Contador, Contador2; 
+  for (Contador = 0; Nome[Contador] != '\0'; Contador++)  {
+    if((Nome[Contador] < 65 || Nome[Contador] > 90) && (Nome[Contador] < 97 || Nome[Contador] > 122)){
+       for(Contador2 = Contador;Nome[Contador2] != '\0';Contador2++){
+        Nome[Contador2] = Nome[Contador2 + 1];
+       }
+       Contador--;
+    }
+  }
+}
+
+
 Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes){
   int count1, count2; 
   Clientes cliente_atual; 
 
   for (count1 = 1; count1 < Quantidade_Clientes; count1++)  { 
-    cliente_atual = Clientes_Var[count1]; .
+    cliente_atual = Clientes_Var[count1];
     count2 = count1 - 1; 
 
 

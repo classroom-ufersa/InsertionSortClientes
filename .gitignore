@@ -1,3 +1,9 @@
+# Text files
+.txt
+
+# VScode
+.vscode
+
 # Prerequisites
 *.d
 

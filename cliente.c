@@ -1,120 +1,107 @@
-#include <stdio.h>
 #include "cliente.h"
-  
-//Definicao da struct clientes 
-struct clientes{
-    char nome[80];
-    char endereco[80];
-    int codigo_cliente;
-#include <stdlib.h>
 
-    struct clientes {
-  char Nome[80];
-  char Endereco[80];
-  int Codigo_de_Cliente;
-};
-
-//Criacao da funcao Escrever_dados, que vai pedir os dados do cliente ao usuario.
-void escrever_dados(){
-void Escrever_dados() {
-
-    int quantidade_clientes; int contador;
-    printf("===Cadastro de clientes===");
-
-    //Pergunta ao usuario a quantidade de clientes que ele quer cadastrar os dados.
-    printf("Digite a Quantidade de clientes que deseja cadastrar:\t"); 
-    scanf("%d", &quantidade_clientes);
-    Clientes *Clientes_Var = (Clientes *)malloc(sizeof(Clientes) * Quantidade_Clientes); //Criacao do malloc para guardar um espaço na memoria para a quantidade de clientes.
-
-    //Criacao do for para pedir os dados do cliente ate que quantidade de clientes que usuario digitou chegue no limite imposto no loop.
-    for (contador = 0; contador < Quantidade_Clientes; contador++) {
-
-        printf("Digite o nome do cliente:\n");
-        scanf(" %[^\n]", Clientes_Var[contador].Nome);
-
-        printf("Digite o endereco do cliente:\n");
-        scanf(" %[^\n]", Clientes_Var[contador].Endereco);
-
-        printf("Digite o codigo do cliente:\n");
-        scanf("%d", &Clientes_Var[contador].Codigo_de_Cliente);
-
-      //Chama a funcao insertionSort para que a cada cliente cadastrado, os nomes sejam colocados em ordem alfabetica.
-        void insertionSort(Clientes_Var, contador); 
-    }
-
-    FILE *Arquivo_Clientes = fopen("Clientes.txt", "wr"); //Criacao do FILE para manipular um arquivo txt e armazenar nesse arquivo os dados do cliente.
-
-   //Criacao de um for para amazenar os dados do cliente em um arquivo txt de acordo com a quantidade de clientes que o usuario vai cadastrar.
-    for (contador = 0; contador < Quantidade_Clientes; contador++){
-        
-        fprintf(Arquivo_Clientes, "Dados dos clientes %d:\n", contador + 1);
-        fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador].Nome);
-        fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
-        fprintf(Arquivo_Clientes, "Codigo de Cliente:  %d\n", Clientes_Var[contador].Codigo_de_Cliente);
-    }
-
-    //Depois de terminar de usar o arquivo, o arquivo eh fechado usando fclose, liberando assim os recursos associados a ele.
-    fclose(Arquivo_Clientes);
-  int Quantidade_Clientes;
-  int contador;
-  printf("Digite a Quantidade de Clientes:\t");
-  scanf("%d", &Quantidade_Clientes);
-  Clientes **Clientes_Var =
-      (Clientes **)malloc(sizeof(Clientes*) * Quantidade_Clientes);
-      for(int i=0; i<Quantidade_Clientes; i++){
-        Clientes_Var[i] = (Clientes*) malloc(sizeof(Clientes));
-      }
-  FILE *Arquivo_Clientes = fopen("Clientes.txt", "w+");
-
-  for (contador = 0; contador < Quantidade_Clientes; contador++) {
-    // fprintf(Arquivo_Clientes, "Dados dos clientes:\n");
-
-    printf("Digite o nome do cliente:\n");
-    scanf(" %[^\n]", Clientes_Var[contador]->Nome);
-    fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador]->Nome);
-
-    printf("Digite o endereco do cliente:\n");
-    scanf(" %[^\n]", Clientes_Var[contador]->Endereco);
-    fprintf(Arquivo_Clientes, "Endereco:  %s\n",
-            Clientes_Var[contador]->Endereco);
-
-    printf("Digite o codigo do cliente:\n");
-    scanf("%d", &Clientes_Var[contador]->Codigo_de_Cliente);
-    fprintf(Arquivo_Clientes, "Codigo de Cliente:  %d\n",
-            Clientes_Var[contador]->Codigo_de_Cliente);
+int Contador_Clientes(){ 
+  char linha[200];  
+  int Quantidade_Clientes = 0;
+  FILE *Arquivo_Clientes = fopen("Clientes.txt", "rt"); 
+  if (Arquivo_Clientes == NULL) { 
+    printf("Erro na abertura do arquivo\n");
+    exit(1);
   }
+  while (fgets(linha, 200, Arquivo_Clientes) != NULL) { 
+    if (strstr(linha, "Dados dos clientes:")) { 
+     
+      Quantidade_Clientes++;
+    }
+  }
+  fclose(Arquivo_Clientes); 
+  return Quantidade_Clientes; 
+}
 
+void Ler_Dados(Clientes *Clientes_Var, int Quantidade_Clientes){ 
+  int contador; 
+  FILE *Arquivo_Clientes = fopen("Clientes.txt", "rt"); 
+  if (Arquivo_Clientes == NULL) { 
+    printf("Erro na abertura do arquivo\n");
+    exit(1);
+  }
+  for (contador = 0; contador < Quantidade_Clientes; contador++) { 
+    fscanf(Arquivo_Clientes, "Dados dos clientes:\nNome: %[^\n]\nEndereco: %[^\n]\nCodigo de Cliente: %lli\n\n", Clientes_Var[contador].Nome, Clientes_Var[contador].Endereco, &Clientes_Var[contador].Codigo_de_Cliente);
+  }
+  fclose(Arquivo_Clientes); 
+}
+
+void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes){ 
+  int contador; 
+  FILE *Arquivo_Clientes = fopen("Clientes.txt", "wt"); 
+  if (Arquivo_Clientes == NULL)  { 
+    printf("Erro na abertura do arquivo\n");
+    exit(1);
+  }
+  for (contador = 0; contador < Quantidade_Clientes; contador++)  { 
+    fprintf(Arquivo_Clientes, "Dados dos clientes:\n");
+    fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador].Nome);
+    fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
+    fprintf(Arquivo_Clientes, "Codigo de Cliente:  %lli\n\n", Clientes_Var[contador].Codigo_de_Cliente);
+  }
   fclose(Arquivo_Clientes);
 }
 
- //Criacao da funcao insertionSort para ordenacao de elementos, nesse caso dos nomes dos clientes em ordem alfabetica.
-void insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes){
-
-    int Contador1, Contador2;
-    char key;
-    for (Contador1 = 1; Contador1 < Quantidade_Clientes; Contador1++) {
-        key = Clientes_Var[Contador1].Nome[0];
-        Contador2 = Contador1 - 1;
-
-        while (Contador2 >= 0 && Clientes_Var[Contador2].Nome[0] > key) {
-            Clientes_Var[Contador2 + 1] = Clientes_Var[Contador2];
-            Contador2 = Contador2 - 1;
-        }
-        Clientes_Var[Contador2 + 1] = Clientes_Var[Contador1];
+void string_maiuscula_minuscula(char *Nome){ 
+  int Contador; 
+  Nome[0] = toupper(Nome[0]);  
+  for (Contador = 1; Nome[Contador] != '\0'; Contador++)  { 
+    if (isspace(Nome[Contador - 1]))  { 
+      Nome[Contador] = toupper(Nome[Contador]);
+    } else  { 
+      Nome[Contador] = tolower(Nome[Contador]); 
     }
+  }
 }
 
-void insertionSort(Clientes **Clientes_Var, int Quantidade_Clientes) {
-  int Contador1, Contador2;
-  char key;
-  for (Contador1 = 1; Contador1 < Quantidade_Clientes; Contador1++) {
-    key = Clientes_Var[Contador1]->Nome[0];
-    Contador2 = Contador1 - 1;
-
-    while (Contador2 >= 0 && Clientes_Var[Contador2]->Nome[0] > key) {
-      Clientes_Var[Contador2 + 1]->Nome[0] = Clientes_Var[Contador2]->Nome[0];
-      Contador2 = Contador2 - 1;
+void Tratamento_de_Dado_Nome(char *Nome){
+  int Contador, Contador2; 
+  for (Contador = 0; Nome[Contador] != '\0'; Contador++)  {
+    if((Nome[Contador] < 65 || Nome[Contador] > 90) && (Nome[Contador] < 97 || Nome[Contador] > 122)){
+       for(Contador2 = Contador;Nome[Contador2] != '\0';Contador2++){
+        Nome[Contador2] = Nome[Contador2 + 1];
+       }
+       Contador--;
     }
-    Clientes_Var[Contador2 + 1]->Nome[0] = key;
   }
+}
+
+void Tratamento_de_Dado_Codigo(char *String_Codigo)
+{
+  int Contador, Contador2;
+  for (Contador = 0; String_Codigo[Contador] != '\0'; Contador++)
+  {
+    if (String_Codigo[Contador] < 48 || String_Codigo[Contador] > 57)
+    {
+      for (Contador2 = Contador; String_Codigo[Contador2] != '\0'; Contador2++)
+      {
+        String_Codigo[Contador2] = String_Codigo[Contador2 + 1];
+      }
+      Contador--;
+    }
+  }
+}
+
+Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes){
+  int count1, count2; 
+  Clientes cliente_atual; 
+
+  for (count1 = 1; count1 < Quantidade_Clientes; count1++)  { 
+    cliente_atual = Clientes_Var[count1];
+    count2 = count1 - 1; 
+
+
+   while (count2 >= 0 && strcmp(Clientes_Var[count2].Nome, cliente_atual.Nome) > 0){ 
+      Clientes_Var[count2+ 1] = Clientes_Var[count2];
+      count2--; 
+    }
+    Clientes_Var[count2 + 1] = cliente_atual; 
+  }
+
+  return Clientes_Var; 
 }

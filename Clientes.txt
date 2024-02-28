@@ -1,6 +1,49 @@
-Nome:  felipe
-Endereco:  alexandria
-Codigo de Cliente:  123
-Nome:  porfirio
-Endereco:  portal
-Codigo de Cliente:  432
+Dados dos clientes:
+Nome: João Silva
+Endereco: Rua das Flores, 123, Bairro Felicidade, Cidade Alegre
+Codigo de Cliente: 1001
+
+Dados dos clientes:
+Nome: Maria Oliveira
+Endereco: Avenida Principal, 456, Bairro Central, Cidade Feliz
+Codigo de Cliente: 1002
+
+Dados dos clientes:
+Nome: Carlos Santos
+Endereco: Travessa das Palmeiras, 789, Bairro Verde, Cidade Tranquila
+Codigo de Cliente: 1003
+
+Dados dos clientes:
+Nome: Ana Souza
+Endereco: Rua das Estrelas, 321, Bairro Sol Nascente, Cidade Harmonia
+Codigo de Cliente: 1004
+
+Dados dos clientes:
+Nome: Pedro Pereira
+Endereco: Alameda dos Sonhos, 654, Bairro Aurora, Cidade Serena
+Codigo de Cliente: 1005
+
+Dados dos clientes:
+Nome: Juliana Lima
+Endereco: Praça da Paz, 987, Bairro Esperança, Cidade Amável
+Codigo de Cliente: 1006
+
+Dados dos clientes:
+Nome: Rafael Almeida
+Endereco: Estrada da Alegria, 741, Bairro Feliz, Cidade Encantada
+Codigo de Cliente: 1007
+
+Dados dos clientes:
+Nome: Camila Costa
+Endereco: Avenida da Liberdade, 852, Bairro Independência, Cidade Livre
+Codigo de Cliente: 1008
+
+Dados dos clientes:
+Nome: Lucas Fernandes
+Endereco: Rua das Gaivotas, 159, Bairro Mar Azul, Cidade Pacifica
+Codigo de Cliente: 1009
+
+Dados dos clientes:
+Nome: Larissa Martins
+Endereco: Travessa das Rosas, 369, Bairro Jardim das Flores, Cidade Primavera
+Codigo de Cliente: 1010

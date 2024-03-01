@@ -1,414 +1,415 @@
 Dados dos clientes:
-Nome: João Silva
-Endereco: Rua das Flores, 123, Bairro Felicidade, Cidade Alegre
-Codigo de Cliente: 1001
+Nome:  Amandamartins
+Endereco:  Estrada da Felicidade, 1213, Bairro Verde, Cidade Serena
+Codigo de Cliente:  1018
 
 Dados dos clientes:
-Nome: Maria Oliveira
-Endereco: Avenida Principal, 456, Bairro Central, Cidade Feliz
-Codigo de Cliente: 1002
+Nome:  Amandapereira
+Endereco:  Travessa da Alegria, 5859, Bairro Sereno, Cidade Pacifica
+Codigo de Cliente:  1041
 
 Dados dos clientes:
-Nome: Carlos Santos
-Endereco: Travessa das Palmeiras, 789, Bairro Verde, Cidade Tranquila
-Codigo de Cliente: 1003
+Nome:  Amandapereira
+Endereco:  Travessa da Alegria, 5859, Bairro Sereno, Cidade Pacifica
+Codigo de Cliente:  1041
 
 Dados dos clientes:
-Nome: Ana Souza
-Endereco: Rua das Estrelas, 321, Bairro Sol Nascente, Cidade Harmonia
-Codigo de Cliente: 1004
+Nome:  Anaclaraalves
+Endereco:  Travessa da Harmonia, 4849, Bairro Sol Nascente, Cidade Amável
+Codigo de Cliente:  1036
 
 Dados dos clientes:
-Nome: Pedro Pereira
-Endereco: Alameda dos Sonhos, 654, Bairro Aurora, Cidade Serena
-Codigo de Cliente: 1005
+Nome:  Anaclaraalves
+Endereco:  Travessa da Harmonia, 4849, Bairro Sol Nascente, Cidade Amável
+Codigo de Cliente:  1036
 
 Dados dos clientes:
-Nome: Juliana Lima
-Endereco: Praça da Paz, 987, Bairro Esperança, Cidade Amável
-Codigo de Cliente: 1006
+Nome:  Anasantos
+Endereco:  Avenida das Flores, 567, Bairro Feliz, Cidade Tranquila
+Codigo de Cliente:  1012
 
 Dados dos clientes:
-Nome: Rafael Almeida
-Endereco: Estrada da Alegria, 741, Bairro Feliz, Cidade Encantada
-Codigo de Cliente: 1007
+Nome:  Anasouza
+Endereco:  Rua das Estrelas, 321, Bairro Sol Nascente, Cidade Harmonia
+Codigo de Cliente:  1004
 
 Dados dos clientes:
-Nome: Camila Costa
-Endereco: Avenida da Liberdade, 852, Bairro Independência, Cidade Livre
-Codigo de Cliente: 1008
+Nome:  Andralves
+Endereco:  Travessa da Liberdade, 567, Bairro Verde, Cidade Tranquila
+Codigo de Cliente:  1013
 
 Dados dos clientes:
-Nome: Lucas Fernandes
-Endereco: Rua das Gaivotas, 159, Bairro Mar Azul, Cidade Pacifica
-Codigo de Cliente: 1009
+Nome:  Andrpereira
+Endereco:  Travessa dos Girassóis, 5859, Bairro Sereno, Cidade Pacifica
+Codigo de Cliente:  1041
 
 Dados dos clientes:
-Nome: Larissa Martins
-Endereco: Travessa das Rosas, 369, Bairro Jardim das Flores, Cidade Primavera
-Codigo de Cliente: 1010
+Nome:  Beatrizoliveira
+Endereco:  Rua das Estrelas, 432, Bairro Sol Nascente, Cidade Harmonia
+Codigo de Cliente:  1014
 
 Dados dos clientes:
-Nome: João Rodrigues
-Endereço: Rua das Palmeiras, 789, Bairro Felicidade, Cidade Alegre
-Código de Cliente: 1011
+Nome:  Beatrizpereira
+Endereco:  Travessa da Alegria, 3839, Bairro Sereno, Cidade Pacifica
+Codigo de Cliente:  1031
 
 Dados dos clientes:
-Nome: Fernanda Costa
-Endereço: Avenida das Flores, 234, Bairro Central, Cidade Feliz
-Código de Cliente: 1012
+Nome:  Brunosilva
+Endereco:  Travessa dos Sonhos, 1415, Bairro Sol Nascente, Cidade Harmonia
+Codigo de Cliente:  1019
 
 Dados dos clientes:
-Nome: André Alves
-Endereço: Travessa da Liberdade, 567, Bairro Verde, Cidade Tranquila
-Código de Cliente: 1013
+Nome:  Camilacosta
+Endereco:  Avenida da Liberdade, 852, Bairro Independência, Cidade Livre
+Codigo de Cliente:  1008
 
 Dados dos clientes:
-Nome: Beatriz Oliveira
-Endereço: Rua das Estrelas, 432, Bairro Sol Nascente, Cidade Harmonia
-Código de Cliente: 1014
+Nome:  Camilaoliveira
+Endereco:  Rua das Orquídeas, 4445, Bairro Harmonia, Cidade Serena
+Codigo de Cliente:  1034
 
 Dados dos clientes:
-Nome: Guilherme Santos
-Endereço: Alameda dos Sonhos, 765, Bairro Aurora, Cidade Serena
-Código de Cliente: 1015
+Nome:  Carlossantos
+Endereco:  Travessa das Palmeiras, 789, Bairro Verde, Cidade Tranquila
+Codigo de Cliente:  1003
 
 Dados dos clientes:
-Nome: Isabela Lima
-Endereço: Praça da Paz, 876, Bairro Esperança, Cidade Amável
-Código de Cliente: 1016
+Nome:  Carlossilva
+Endereco:  Alameda das Violetas, 6061, Bairro Verde, Cidade Alegre
+Codigo de Cliente:  1042
 
 Dados dos clientes:
-Nome: Renato Almeida
-Endereço: Estrada da Alegria, 987, Bairro Feliz, Cidade Encantada
-Código de Cliente: 1017
+Nome:  Carlossilva
+Endereco:  Alameda das Violetas, 6061, Bairro Verde, Cidade Alegre
+Codigo de Cliente:  1042
 
 Dados dos clientes:
-Nome: Vanessa Costa
-Endereço: Avenida Principal, 678, Bairro Independência, Cidade Livre
-Código de Cliente: 1018
+Nome:  Carolinacosta
+Endereco:  Avenida da Esperança, 5657, Bairro Aurora, Cidade Harmonia
+Codigo de Cliente:  1040
 
 Dados dos clientes:
-Nome: Marcelo Fernandes
-Endereço: Rua das Gaivotas, 543, Bairro Mar Azul, Cidade Pacifica
-Código de Cliente: 1019
+Nome:  Carolinamartins
+Endereco:  Travessa das Rosas, 876, Bairro Jardim das Flores, Cidade Primavera
+Codigo de Cliente:  1020
 
 Dados dos clientes:
-Nome: Carolina Martins
-Endereço: Travessa das Rosas, 876, Bairro Jardim das Flores, Cidade Primavera
-Código de Cliente: 1020
+Nome:  Diegooliveira
+Endereco:  Avenida das Estrelas, 3637, Bairro Aurora, Cidade Harmonia
+Codigo de Cliente:  1030
 
 Dados dos clientes:
-Nome: José Oliveira
-Endereco: Rua das Palmeiras, 234, Bairro Harmonia, Cidade Alegre
-Codigo de Cliente: 1011
+Nome:  Eduardoalmeida
+Endereco:  Estrada da Liberdade, 6263, Bairro Primavera, Cidade Feliz
+Codigo de Cliente:  1043
 
 Dados dos clientes:
-Nome: Ana Santos
-Endereco: Avenida das Flores, 567, Bairro Feliz, Cidade Tranquila
-Codigo de Cliente: 1012
+Nome:  Eduardooliveira
+Endereco:  Avenida das Águias, 2627, Bairro Liberdade, Cidade Pacifica
+Codigo de Cliente:  1025
 
 Dados dos clientes:
-Nome: Marcos Pereira
-Endereco: Travessa da Paz, 890, Bairro Sereno, Cidade Feliz
-Codigo de Cliente: 1013
+Nome:  Felipelima
+Endereco:  Alameda das Flores, 5051, Bairro Florido, Cidade Encantada
+Codigo de Cliente:  1037
 
 Dados dos clientes:
-Nome: Mariana Lima
-Endereco: Alameda dos Girassóis, 123, Bairro Esperança, Cidade Livre
-Codigo de Cliente: 1014
+Nome:  Felipemartins
+Endereco:  Estrada da Harmonia, 3637, Bairro Verde, Cidade Tranquila
+Codigo de Cliente:  1030
 
 Dados dos clientes:
-Nome: Gabriel Almeida
-Endereco: Praça da Liberdade, 456, Bairro Independência, Cidade Pacifica
-Codigo de Cliente: 1015
+Nome:  Fernandacosta
+Endereco:  Avenida das Flores, 234, Bairro Central, Cidade Feliz
+Codigo de Cliente:  1012
 
 Dados dos clientes:
-Nome: Letícia Costa
-Endereco: Rua da Alegria, 789, Bairro Central, Cidade Amável
-Codigo de Cliente: 1016
+Nome:  Fernandasantos
+Endereco:  Praça da Felicidade, 5253, Bairro Independência, Cidade Livre
+Codigo de Cliente:  1038
 
 Dados dos clientes:
-Nome: Thiago Fernandes
-Endereco: Avenida das Estrelas, 1011, Bairro Aurora, Cidade Encantada
-Codigo de Cliente: 1017
+Nome:  Gabrielalmeida
+Endereco:  Praça da Liberdade, 456, Bairro Independência, Cidade Pacifica
+Codigo de Cliente:  1015
 
 Dados dos clientes:
-Nome: Amanda Martins
-Endereco: Estrada da Felicidade, 1213, Bairro Verde, Cidade Serena
-Codigo de Cliente: 1018
+Nome:  Gabrielapereira
+Endereco:  Travessa da Liberdade, 3839, Bairro Sol Nascente, Cidade Livre
+Codigo de Cliente:  1031
 
 Dados dos clientes:
-Nome: Bruno Silva
-Endereco: Travessa dos Sonhos, 1415, Bairro Sol Nascente, Cidade Harmonia
-Codigo de Cliente: 1019
+Nome:  Gabrielmartins
+Endereco:  Avenida das Árvores, 4647, Bairro Verdejante, Cidade Tranquila
+Codigo de Cliente:  1035
 
 Dados dos clientes:
-Nome: Renata Oliveira
-Endereco: Alameda das Gaivotas, 1617, Bairro Mar Azul, Cidade Alegre
-Codigo de Cliente: 1020
+Nome:  Gabrielmartins
+Endereco:  Avenida das Árvores, 4647, Bairro Verdejante, Cidade Tranquila
+Codigo de Cliente:  1035
 
 Dados dos clientes:
-Nome: Lucas Oliveira
-Endereco: Rua da Felicidade, 1819, Bairro Aurora, Cidade Tranquila
-Codigo de Cliente: 1021
+Nome:  Giovannaoliveira
+Endereco:  Rua dos Lírios, 4445, Bairro Jardim das Flores, Cidade Serena
+Codigo de Cliente:  1034
 
 Dados dos clientes:
-Nome: Juliana Santos
-Endereco: Avenida da Paz, 2021, Bairro Harmonia, Cidade Feliz
-Codigo de Cliente: 1022
+Nome:  Giovannaoliveira
+Endereco:  Rua dos Lírios, 4445, Bairro Jardim das Flores, Cidade Serena
+Codigo de Cliente:  1034
 
 Dados dos clientes:
-Nome: Pedro Pereira
-Endereco: Travessa das Flores, 2223, Bairro Sereno, Cidade Livre
-Codigo de Cliente: 1023
+Nome:  Guilhermealves
+Endereco:  Avenida dos Ipês, 2627, Bairro Floresta Azul, Cidade Tranquila
+Codigo de Cliente:  1025
 
 Dados dos clientes:
-Nome: Marina Silva
-Endereco: Rua das Orquídeas, 2425, Bairro Primavera, Cidade Serena
-Codigo de Cliente: 1024
+Nome:  Guilhermesantos
+Endereco:  Alameda dos Sonhos, 765, Bairro Aurora, Cidade Serena
+Codigo de Cliente:  1015
 
 Dados dos clientes:
-Nome: Eduardo Oliveira
-Endereco: Avenida das Águias, 2627, Bairro Liberdade, Cidade Pacifica
-Codigo de Cliente: 1025
+Nome:  Gustavolima
+Endereco:  Alameda da Alegria, 4041, Bairro Sereno, Cidade Alegre
+Codigo de Cliente:  1032
 
 Dados dos clientes:
-Nome: Isabela Santos
-Endereco: Travessa da Alegria, 2829, Bairro Central, Cidade Amável
-Codigo de Cliente: 1026
+Nome:  Gustavorodrigues
+Endereco:  Avenida das Palmeiras, 4647, Bairro Jardim Azul, Cidade Tranquila
+Codigo de Cliente:  1035
 
 Dados dos clientes:
-Nome: Matheus Almeida
-Endereco: Praça das Estrelas, 3031, Bairro Independência, Cidade Encantada
-Codigo de Cliente: 1027
+Nome:  Isabelalima
+Endereco:  Praça da Paz, 876, Bairro Esperança, Cidade Amável
+Codigo de Cliente:  1016
 
 Dados dos clientes:
-Nome: Laura Costa
-Endereco: Rua da Paz, 3233, Bairro Aurora, Cidade Harmonia
-Codigo de Cliente: 1028
+Nome:  Isabelalima
+Endereco:  Travessa da Harmonia, 2829, Bairro Central, Cidade Amável
+Codigo de Cliente:  1026
 
 Dados dos clientes:
-Nome: Rafaela Fernandes
-Endereco: Avenida dos Girassóis, 3435, Bairro Esperança, Cidade Feliz
-Codigo de Cliente: 1029
+Nome:  Isabelasantos
+Endereco:  Travessa da Alegria, 2829, Bairro Central, Cidade Amável
+Codigo de Cliente:  1026
 
 Dados dos clientes:
-Nome: Felipe Martins
-Endereco: Estrada da Harmonia, 3637, Bairro Verde, Cidade Tranquila
-Codigo de Cliente: 1030
+Nome:  Jliasilva
+Endereco:  Alameda da Alegria, 6061, Bairro Verde, Cidade Alegre
+Codigo de Cliente:  1042
 
 Dados dos clientes:
-Nome: Gabriela Pereira
-Endereco: Travessa da Liberdade, 3839, Bairro Sol Nascente, Cidade Livre
-Codigo de Cliente: 1031
+Nome:  Joorodrigues
+Endereco:  Rua das Palmeiras, 789, Bairro Felicidade, Cidade Alegre
+Codigo de Cliente:  1011
 
 Dados dos clientes:
-Nome: Gustavo Lima
-Endereco: Alameda da Alegria, 4041, Bairro Sereno, Cidade Alegre
-Codigo de Cliente: 1032
+Nome:  Joosilva
+Endereco:  Rua das Flores, 123, Bairro Felicidade, Cidade Alegre
+Codigo de Cliente:  1001
 
 Dados dos clientes:
-Nome: Larissa Oliveira
-Endereco: Rua das Gaivotas, 4243, Bairro Mar Azul, Cidade Pacifica
-Codigo de Cliente: 1033
+Nome:  Josoliveira
+Endereco:  Rua das Palmeiras, 234, Bairro Harmonia, Cidade Alegre
+Codigo de Cliente:  1011
 
 Dados dos clientes:
-Nome: Luana Rodrigues
-Endereco: Rua das Violetas, 2425, Bairro Jardim Primavera, Cidade Serena
-Codigo de Cliente: 1024
+Nome:  Julianalima
+Endereco:  Praça da Paz, 987, Bairro Esperança, Cidade Amável
+Codigo de Cliente:  1006
 
 Dados dos clientes:
-Nome: Guilherme Alves
-Endereco: Avenida dos Ipês, 2627, Bairro Floresta Azul, Cidade Tranquila
-Codigo de Cliente: 1025
+Nome:  Julianasantos
+Endereco:  Avenida da Paz, 2021, Bairro Harmonia, Cidade Feliz
+Codigo de Cliente:  1022
 
 Dados dos clientes:
-Nome: Isabela Lima
-Endereco: Travessa da Harmonia, 2829, Bairro Central, Cidade Amável
-Codigo de Cliente: 1026
+Nome:  Larissamartins
+Endereco:  Travessa das Rosas, 369, Bairro Jardim das Flores, Cidade Primavera
+Codigo de Cliente:  1010
 
 Dados dos clientes:
-Nome: Rafaela Santos
-Endereco: Alameda das Rosas, 3031, Bairro Florido, Cidade Encantada
-Codigo de Cliente: 1027
+Nome:  Larissaoliveira
+Endereco:  Rua das Gaivotas, 4243, Bairro Mar Azul, Cidade Pacifica
+Codigo de Cliente:  1033
 
 Dados dos clientes:
-Nome: Matheus Fernandes
-Endereco: Praça da Liberdade, 3233, Bairro Independência, Cidade Livre
-Codigo de Cliente: 1028
+Nome:  Lauracosta
+Endereco:  Rua da Paz, 3233, Bairro Aurora, Cidade Harmonia
+Codigo de Cliente:  1028
 
 Dados dos clientes:
-Nome: Laura Costa
-Endereco: Rua da Esperança, 3435, Bairro Felicidade, Cidade Tranquila
-Codigo de Cliente: 1029
+Nome:  Lauracosta
+Endereco:  Rua da Esperança, 3435, Bairro Felicidade, Cidade Tranquila
+Codigo de Cliente:  1029
 
 Dados dos clientes:
-Nome: Diego Oliveira
-Endereco: Avenida das Estrelas, 3637, Bairro Aurora, Cidade Harmonia
-Codigo de Cliente: 1030
+Nome:  Leonardocosta
+Endereco:  Avenida das Estrelas, 5657, Bairro Aurora, Cidade Harmonia
+Codigo de Cliente:  1040
 
 Dados dos clientes:
-Nome: Beatriz Pereira
-Endereco: Travessa da Alegria, 3839, Bairro Sereno, Cidade Pacifica
-Codigo de Cliente: 1031
+Nome:  Leonardocosta
+Endereco:  Avenida das Estrelas, 5657, Bairro Aurora, Cidade Harmonia
+Codigo de Cliente:  1040
 
 Dados dos clientes:
-Nome: Lucas Silva
-Endereco: Alameda dos Girassóis, 4041, Bairro Verde, Cidade Alegre
-Codigo de Cliente: 1032
+Nome:  Letciacosta
+Endereco:  Rua da Alegria, 789, Bairro Central, Cidade Amável
+Codigo de Cliente:  1016
 
 Dados dos clientes:
-Nome: Manuela Almeida
-Endereco: Estrada das Flores, 4243, Bairro Primavera, Cidade Feliz
-Codigo de Cliente: 1033
+Nome:  Letciasantos
+Endereco:  Rua da Esperança, 5455, Bairro Felicidade, Cidade Tranquila
+Codigo de Cliente:  1039
 
 Dados dos clientes:
-Nome: Camila Oliveira
-Endereco: Rua das Orquídeas, 4445, Bairro Harmonia, Cidade Serena
-Codigo de Cliente: 1034
+Nome:  Letciasantos
+Endereco:  Rua da Esperança, 5455, Bairro Felicidade, Cidade Tranquila
+Codigo de Cliente:  1039
 
 Dados dos clientes:
-Nome: Gustavo Rodrigues
-Endereco: Avenida das Palmeiras, 4647, Bairro Jardim Azul, Cidade Tranquila
-Codigo de Cliente: 1035
+Nome:  Luanarodrigues
+Endereco:  Rua das Violetas, 2425, Bairro Jardim Primavera, Cidade Serena
+Codigo de Cliente:  1024
 
 Dados dos clientes:
-Nome: Marina Alves
-Endereco: Travessa da Liberdade, 4849, Bairro Central, Cidade Amável
-Codigo de Cliente: 1036
+Nome:  Lucasfernandes
+Endereco:  Rua das Gaivotas, 159, Bairro Mar Azul, Cidade Pacifica
+Codigo de Cliente:  1009
 
 Dados dos clientes:
-Nome: Felipe Lima
-Endereco: Alameda das Flores, 5051, Bairro Florido, Cidade Encantada
-Codigo de Cliente: 1037
+Nome:  Lucasoliveira
+Endereco:  Rua da Felicidade, 1819, Bairro Aurora, Cidade Tranquila
+Codigo de Cliente:  1021
 
 Dados dos clientes:
-Nome: Fernanda Santos
-Endereco: Praça da Felicidade, 5253, Bairro Independência, Cidade Livre
-Codigo de Cliente: 1038
+Nome:  Lucassilva
+Endereco:  Alameda dos Girassóis, 4041, Bairro Verde, Cidade Alegre
+Codigo de Cliente:  1032
 
 Dados dos clientes:
-Nome: Ricardo Fernandes
-Endereco: Rua das Violetas, 5455, Bairro Felicidade, Cidade Tranquila
-Codigo de Cliente: 1039
+Nome:  Manuelaalmeida
+Endereco:  Estrada das Flores, 4243, Bairro Primavera, Cidade Feliz
+Codigo de Cliente:  1033
 
 Dados dos clientes:
-Nome: Carolina Costa
-Endereco: Avenida da Esperança, 5657, Bairro Aurora, Cidade Harmonia
-Codigo de Cliente: 1040
+Nome:  Marcelofernandes
+Endereco:  Rua das Gaivotas, 543, Bairro Mar Azul, Cidade Pacifica
+Codigo de Cliente:  1019
 
 Dados dos clientes:
-Nome: André Pereira
-Endereco: Travessa dos Girassóis, 5859, Bairro Sereno, Cidade Pacifica
-Codigo de Cliente: 1041
+Nome:  Marcospereira
+Endereco:  Travessa da Paz, 890, Bairro Sereno, Cidade Feliz
+Codigo de Cliente:  1013
 
 Dados dos clientes:
-Nome: Júlia Silva
-Endereco: Alameda da Alegria, 6061, Bairro Verde, Cidade Alegre
-Codigo de Cliente: 1042
+Nome:  Marianalima
+Endereco:  Alameda dos Girassóis, 123, Bairro Esperança, Cidade Livre
+Codigo de Cliente:  1014
 
 Dados dos clientes:
-Nome: Eduardo Almeida
-Endereco: Estrada da Liberdade, 6263, Bairro Primavera, Cidade Feliz
-Codigo de Cliente: 1043
+Nome:  Mariaoliveira
+Endereco:  Avenida Principal, 456, Bairro Central, Cidade Feliz
+Codigo de Cliente:  1002
 
 Dados dos clientes:
-Nome: Giovanna Oliveira
-Endereco: Rua dos Lírios, 4445, Bairro Jardim das Flores, Cidade Serena
-Codigo de Cliente: 1034
+Nome:  Marinaalves
+Endereco:  Travessa da Liberdade, 4849, Bairro Central, Cidade Amável
+Codigo de Cliente:  1036
 
 Dados dos clientes:
-Nome: Gabriel Martins
-Endereco: Avenida das Árvores, 4647, Bairro Verdejante, Cidade Tranquila
-Codigo de Cliente: 1035
+Nome:  Marinasilva
+Endereco:  Rua das Orquídeas, 2425, Bairro Primavera, Cidade Serena
+Codigo de Cliente:  1024
 
 Dados dos clientes:
-Nome: Ana Clara Alves
-Endereco: Travessa da Harmonia, 4849, Bairro Sol Nascente, Cidade Amável
-Codigo de Cliente: 1036
+Nome:  Matheusalmeida
+Endereco:  Praça das Estrelas, 3031, Bairro Independência, Cidade Encantada
+Codigo de Cliente:  1027
 
 Dados dos clientes:
-Nome: Rafaela Rodrigues
-Endereco: Alameda dos Pinheiros, 5051, Bairro Sereno, Cidade Encantada
-Codigo de Cliente: 1037
+Nome:  Matheusfernandes
+Endereco:  Praça da Liberdade, 3233, Bairro Independência, Cidade Livre
+Codigo de Cliente:  1028
 
 Dados dos clientes:
-Nome: Matheus Oliveira
-Endereco: Praça da Liberdade, 5253, Bairro Independência, Cidade Livre
-Codigo de Cliente: 1038
+Nome:  Matheusoliveira
+Endereco:  Praça da Liberdade, 5253, Bairro Independência, Cidade Livre
+Codigo de Cliente:  1038
 
 Dados dos clientes:
-Nome: Letícia Santos
-Endereco: Rua da Esperança, 5455, Bairro Felicidade, Cidade Tranquila
-Codigo de Cliente: 1039
+Nome:  Matheusoliveira
+Endereco:  Praça da Liberdade, 5253, Bairro Independência, Cidade Livre
+Codigo de Cliente:  1038
 
 Dados dos clientes:
-Nome: Leonardo Costa
-Endereco: Avenida das Estrelas, 5657, Bairro Aurora, Cidade Harmonia
-Codigo de Cliente: 1040
+Nome:  Pedropereira
+Endereco:  Alameda dos Sonhos, 654, Bairro Aurora, Cidade Serena
+Codigo de Cliente:  1005
 
 Dados dos clientes:
-Nome: Amanda Pereira
-Endereco: Travessa da Alegria, 5859, Bairro Sereno, Cidade Pacifica
-Codigo de Cliente: 1041
+Nome:  Pedropereira
+Endereco:  Travessa das Flores, 2223, Bairro Sereno, Cidade Livre
+Codigo de Cliente:  1023
 
 Dados dos clientes:
-Nome: Carlos Silva
-Endereco: Alameda das Violetas, 6061, Bairro Verde, Cidade Alegre
-Codigo de Cliente: 1042
+Nome:  Rafaelafernandes
+Endereco:  Avenida dos Girassóis, 3435, Bairro Esperança, Cidade Feliz
+Codigo de Cliente:  1029
 
 Dados dos clientes:
-Nome: Sophia Almeida
-Endereco: Estrada das Flores, 6263, Bairro Primavera, Cidade Feliz
-Codigo de Cliente: 1043
+Nome:  Rafaelalmeida
+Endereco:  Estrada da Alegria, 741, Bairro Feliz, Cidade Encantada
+Codigo de Cliente:  1007
 
 Dados dos clientes:
-Nome: Giovanna Oliveira
-Endereco: Rua dos Lírios, 4445, Bairro Jardim das Flores, Cidade Serena
-Codigo de Cliente: 1034
+Nome:  Rafaelarodrigues
+Endereco:  Alameda dos Pinheiros, 5051, Bairro Sereno, Cidade Encantada
+Codigo de Cliente:  1037
 
 Dados dos clientes:
-Nome: Gabriel Martins
-Endereco: Avenida das Árvores, 4647, Bairro Verdejante, Cidade Tranquila
-Codigo de Cliente: 1035
+Nome:  Rafaelarodrigues
+Endereco:  Alameda dos Pinheiros, 5051, Bairro Sereno, Cidade Encantada
+Codigo de Cliente:  1037
 
 Dados dos clientes:
-Nome: Ana Clara Alves
-Endereco: Travessa da Harmonia, 4849, Bairro Sol Nascente, Cidade Amável
-Codigo de Cliente: 1036
+Nome:  Rafaelasantos
+Endereco:  Alameda das Rosas, 3031, Bairro Florido, Cidade Encantada
+Codigo de Cliente:  1027
 
 Dados dos clientes:
-Nome: Rafaela Rodrigues
-Endereco: Alameda dos Pinheiros, 5051, Bairro Sereno, Cidade Encantada
-Codigo de Cliente: 1037
+Nome:  Renataoliveira
+Endereco:  Alameda das Gaivotas, 1617, Bairro Mar Azul, Cidade Alegre
+Codigo de Cliente:  1020
 
 Dados dos clientes:
-Nome: Matheus Oliveira
-Endereco: Praça da Liberdade, 5253, Bairro Independência, Cidade Livre
-Codigo de Cliente: 1038
+Nome:  Renatoalmeida
+Endereco:  Estrada da Alegria, 987, Bairro Feliz, Cidade Encantada
+Codigo de Cliente:  1017
 
 Dados dos clientes:
-Nome: Letícia Santos
-Endereco: Rua da Esperança, 5455, Bairro Felicidade, Cidade Tranquila
-Codigo de Cliente: 1039
+Nome:  Ricardofernandes
+Endereco:  Rua das Violetas, 5455, Bairro Felicidade, Cidade Tranquila
+Codigo de Cliente:  1039
 
 Dados dos clientes:
-Nome: Leonardo Costa
-Endereco: Avenida das Estrelas, 5657, Bairro Aurora, Cidade Harmonia
-Codigo de Cliente: 1040
+Nome:  Sophiaalmeida
+Endereco:  Estrada das Flores, 6263, Bairro Primavera, Cidade Feliz
+Codigo de Cliente:  1043
 
 Dados dos clientes:
-Nome: Amanda Pereira
-Endereco: Travessa da Alegria, 5859, Bairro Sereno, Cidade Pacifica
-Codigo de Cliente: 1041
+Nome:  Sophiaalmeida
+Endereco:  Estrada das Flores, 6263, Bairro Primavera, Cidade Feliz
+Codigo de Cliente:  1043
 
 Dados dos clientes:
-Nome: Carlos Silva
-Endereco: Alameda das Violetas, 6061, Bairro Verde, Cidade Alegre
-Codigo de Cliente: 1042
+Nome:  Thiagofernandes
+Endereco:  Avenida das Estrelas, 1011, Bairro Aurora, Cidade Encantada
+Codigo de Cliente:  1017
 
 Dados dos clientes:
-Nome: Sophia Almeida
-Endereco: Estrada das Flores, 6263, Bairro Primavera, Cidade Feliz
-Codigo de Cliente: 1043
+Nome:  Vanessacosta
+Endereco:  Avenida Principal, 678, Bairro Independência, Cidade Livre
+Codigo de Cliente:  1018
+

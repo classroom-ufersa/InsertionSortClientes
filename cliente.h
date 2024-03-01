@@ -34,6 +34,7 @@ void string_maiuscula_minuscula(char *str);
    sejam maiusculas ou minusculas*/
 void Tratamento_de_Dado_Nome(char *Nome);
 
+/* Função que exclui todo tipo de caractere diferente de letras e espaço*/
 void Tratamento_de_Dado_Codigo(char *String_Codigo);
 
 /*Função que implementa o algoritmo de ordenação Insertion Sort para ordenar os clientes em ordem alfabética,

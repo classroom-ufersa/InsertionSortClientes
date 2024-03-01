@@ -40,9 +40,9 @@ void Escrever_dados(Clientes *Clientes_Var, int Quantidade_Clientes){
   }
   for (contador = 0; contador < Quantidade_Clientes; contador++)  { 
     fprintf(Arquivo_Clientes, "Dados dos clientes:\n");
-    fprintf(Arquivo_Clientes, "Nome:  %s\n", Clientes_Var[contador].Nome);
-    fprintf(Arquivo_Clientes, "Endereco:  %s\n", Clientes_Var[contador].Endereco);
-    fprintf(Arquivo_Clientes, "Codigo de Cliente:  %lli\n\n", Clientes_Var[contador].Codigo_de_Cliente);
+    fprintf(Arquivo_Clientes, "Nome: %s\n", Clientes_Var[contador].Nome);
+    fprintf(Arquivo_Clientes, "Endereco: %s\n", Clientes_Var[contador].Endereco);
+    fprintf(Arquivo_Clientes, "Codigo de Cliente: %lli\n\n", Clientes_Var[contador].Codigo_de_Cliente);
   }
   fclose(Arquivo_Clientes);
 }
@@ -76,7 +76,7 @@ void Tratamento_de_Dado_Codigo(char *String_Codigo)
   int Contador, Contador2;
   for (Contador = 0; String_Codigo[Contador] != '\0'; Contador++)
   {
-    if (String_Codigo[Contador] < 48 || String_Codigo[Contador] > 57)
+    if ((String_Codigo[Contador] < 48 || String_Codigo[Contador] > 57) && (String_Codigo[Contador] != 32))
     {
       for (Contador2 = Contador; String_Codigo[Contador2] != '\0'; Contador2++)
       {

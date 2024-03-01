@@ -62,7 +62,7 @@ void string_maiuscula_minuscula(char *Nome){
 void Tratamento_de_Dado_Nome(char *Nome){
   int Contador, Contador2; 
   for (Contador = 0; Nome[Contador] != '\0'; Contador++)  {
-    if((Nome[Contador] < 65 || Nome[Contador] > 90) && (Nome[Contador] < 97 || Nome[Contador] > 122)){
+    if((Nome[Contador] < 65 || Nome[Contador] > 90) && (Nome[Contador] < 97 || Nome[Contador] > 122) && (Nome[Contador] != 32)){
        for(Contador2 = Contador;Nome[Contador2] != '\0';Contador2++){
         Nome[Contador2] = Nome[Contador2 + 1];
        }
@@ -76,7 +76,7 @@ void Tratamento_de_Dado_Codigo(char *String_Codigo)
   int Contador, Contador2;
   for (Contador = 0; String_Codigo[Contador] != '\0'; Contador++)
   {
-    if ((String_Codigo[Contador] < 48 || String_Codigo[Contador] > 57) && (String_Codigo[Contador] != 32))
+    if (String_Codigo[Contador] < 48 || String_Codigo[Contador] > 57)
     {
       for (Contador2 = Contador; String_Codigo[Contador2] != '\0'; Contador2++)
       {

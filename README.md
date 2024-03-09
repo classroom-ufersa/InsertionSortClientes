@@ -269,6 +269,7 @@ Clientes *insertionSort(Clientes *Clientes_Var, int Quantidade_Clientes) {
 return Clientes_Var; //c9 - 1 vez
 }
 ```
+> Cálculos para verificação da complexidade do tempo
 
 ```latex
     T(n) = c1 + c9 + (c2+c3+c4+c8)(n-1) 
